@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" type="image/png" href="/assets/img/Logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+    <style>
+    /* ---------- page background ---------- */
+        html {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            min-height: 100%;
+            font-family: sans-serif;
+            color: white;
+            background-color: #0b0c2a;
+            background-image: url("./galaxy.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* ---------- card ---------- */
+        .form {
+            width: calc(100% - 2.5rem);
+            max-width: 24rem;
+            margin: 4rem auto;
+            padding: 2rem 1.75rem;
+            background-color: rgba(18, 0, 60, .85);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(89, 17, 255, .45);
+            backdrop-filter: blur(8px);
+        }
+
+        .form h3 {
+            margin: 0 0 1.5rem;
+            text-align: center;
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+
+        /* ---------- form layout: icon | input ---------- */
+        .form form {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+        }
+        .form form br {
+            display: none;
+        }
+
+        .form label {
+            grid-column: 1 / -1;
+            margin: 0 0 .4rem .25rem;
+            font-family: inherit;
+            font-size: .9rem;
+            color: #c9c3e6;
+        }
+
+        /* icon + input look like one joined field */
+        .form form i {
+            display: grid;
+            place-items: center;
+            box-sizing: border-box;
+            width: 2.75rem;
+            align-self: stretch;
+            margin-bottom: 1.1rem;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-right: 0;
+            border-radius: 999px 0 0 999px;
+            color: #22d3ee;
+            transition: border-color .3s ease, box-shadow .3s ease;
+        }
+        .form input {
+            box-sizing: border-box;
+            width: 100%;
+            min-width: 0;
+            margin-bottom: 1.1rem;
+            padding: .8rem 1rem .8rem .25rem;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-left: 0;
+            border-radius: 0 999px 999px 0;
+            color: #fff;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color .3s ease, box-shadow .3s ease;
+        }
+        .form input::placeholder {
+            color: #9d96c4;
+        }
+        .form input:focus,
+        .form i:has(+ input:focus) {
+            border-color: #a855f7;
+            box-shadow: 0 0 14px rgba(168, 85, 247, .55);
+        }
+
+        /* ---------- forgot password (login only) ---------- */
+        .form form > a {
+            grid-column: 1 / -1;
+            justify-self: end;
+            margin-bottom: 1.25rem;
+            font-family: inherit;
+            font-size: .85rem;
+            color: #c9c3e6;
+            text-decoration: none;
+            transition: color .3s ease;
+        }
+        .form form > a:hover,
+        .form form > a:focus-visible {
+            color: #22d3ee;
+        }
+
+        /* ---------- button ---------- */
+        .form button {
+            grid-column: 1 / -1;
+            padding: .8rem 1.1rem;
+            background: linear-gradient(135deg, #5911ff, #a855f7);
+            color: #fff;
+            border: 0;
+            border-radius: 999px;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
+        }
+        .form button:hover,
+        .form button:focus-visible {
+            box-shadow: 0 0 30px #5911ff;
+            filter: brightness(1.2);
+        }
+        @media (prefers-reduced-motion: no-preference) {
+            .form button:hover,
+            .form button:focus-visible { transform: scale(1.03); }
+        }
+
+        /* sign up page: button follows an input (no "forget password" link), so add a gap */
+        .form form > br + button {
+            margin-top: .5rem;
+        }
+
+        /* ---------- bottom line (Sign up / Login link) ---------- */
+        .form > p {
+            margin: 1.5rem 0 0;
+            text-align: center;
+            font-size: .9rem;
+            color: #c9c3e6;
+        }
+        .form > p a {
+            color: #22d3ee;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .form > p a:hover,
+        .form > p a:focus-visible {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h3 class="text-white ">Sign up</h3>
+        <form action="">
+            <label>Enter your email</label><br>
+            <i class="fa-regular fa-user"></i>
+            <input type="email" name="Email" placeholder="Email" required> <br>
+            <label>Enter your password</label><br>
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="password" placeholder="Password" required> <br>
+            <label>Confirm your password</label><br>
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required> <br>
+            <button type="submit">Sign up</button>
+        </form>
+        <p>Already have an account?
+            <span>
+                <a href="./signin.html">Login</a>
+            </span>
+        </p>
+    </div>
+</body>
+</html>
