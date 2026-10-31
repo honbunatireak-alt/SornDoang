@@ -50,6 +50,10 @@ header .header_top .nd_main .logo_name div img{
     width: 60px;
     border: none;
 }
+header .header_top .nd_main a{
+    cursor: pointer;
+    text-decoration: none;
+}
 header .header_top .site_content{
     display: flex;
     flex-wrap: wrap;
@@ -172,6 +176,11 @@ footer .side{
 footer .side .st_footer .s_footer{
     display: flex;
     flex-direction: row;
+}
+footer .side .st_footer a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
 }
 footer .side .st_footer .s_footer div img{
     width: 60px;

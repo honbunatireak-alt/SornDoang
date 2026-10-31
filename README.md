@@ -28,7 +28,6 @@
     │   │   ├── login.html          # Login / Sign up
     │   │   └── signup.html
     │   ├── categories/
-    │   │   ├── all-gear.html
     │   │   ├── gaming.html
     │   │   ├── ultrabooks.html
     │   │   ├── workstations.html
@@ -49,7 +48,6 @@
     │   ├── main.css
     │   ├── components.css
     │   ├── admin.css
-    │   ├── allGear.css
     │   ├── gaming.css
     │   ├── ultrabooks.css
     │   ├── workstations.css
