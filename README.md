@@ -47,9 +47,13 @@
     │       └── orders.html         # Orders (CRUD)
     ├── css/
     │   ├── main.css
-    │   ├── dark-mode.css           # Night mode
     │   ├── components.css
-    │   └── admin.css
+    │   ├── admin.css
+    │   ├── allGear.css
+    │   ├── gaming.css
+    │   ├── ultrabooks.css
+    │   ├── workstations.css
+    │   └── accessories.css
     ├── js/
     │   ├── core/
     │   │   ├── auth.js             # JS / localStorage auth state check
