@@ -160,7 +160,86 @@ header .navbar ul a{
 header .navbar ul li a:hover{
     color: #aa00ff;
 }
-
+/* Apple section */
+#apple{
+    margin: 1rem 1rem;
+}
+#apple h3{
+    margin: 0.5rem 0 0.5rem 0;
+    box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.25);
+}
+#apple figure{
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+}
+#apple figure img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 330px;
+    border-radius: 10px;
+}
+#apple figure ul{
+    list-style-type: "_ ";
+    padding-left: 0.85rem;
+    box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.25);
+}
+#apple figure ul li{
+    font-size: 0.95rem;
+}
+#apple figure div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+#apple figure div h5{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(221, 1, 1);
+}
+@keyframes hover-shine {
+    from { transform: translateX(-120%) skewX(-20deg); }
+    to { transform: translateX(220%) skewX(-20deg); }
+}
+#apple figure div button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #aa00ff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease,
+                box-shadow 0.8s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+#apple figure div button::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.6) 50%, transparent 70%);
+    transform: translateX(-120%) skewX(-20deg);
+    pointer-events: none;
+}
+#apple figure div button:hover, #apple figure div button:focus-visible{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+@media (prefers-reduced-motion: no-preference) {
+    #apple figure div button:hover::before, #apple figure div button:focus-visible::before {
+        animation: hover-shine 0.8s ease 1;
+    }
+}
+@media (prefers-reduced-motion: no-preference) {
+    #apple figure div button:hover, #apple figure div button:focus-visible {
+        transform: scale(1.01);
+    }
+}
 /* footer */
 footer{
     margin-top: 1rem;
