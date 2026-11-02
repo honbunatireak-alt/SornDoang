@@ -238,7 +238,7 @@ apple_category.map((item, index) => {
                 ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
             </ul>
             <div>
-                <h5>Price : ${item.price}</h5>
+                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
                 <button>Buy Now</button>
             </div>
         </figure>
@@ -802,7 +802,7 @@ lenovo_category.map((item, index) => {
                 ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
             </ul>
             <div>
-                <h5>Price : ${item.price}</h5>
+                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
                 <button>Buy Now</button>
             </div>
         </figure>
