@@ -813,11 +813,201 @@ lenovo_section.innerHTML = lenovo_html;
 const rog_section = document.getElementById('rog')
 const rog_category = [
     {
-        title : ""
-        image : ""
+        title : "ROG Strix G16 | G615JHR-RV073W",
+        image : "/assets/img/rog/strix1.png",
         specs : [
+            "CPU : 14th Gen Intel® Core™ i7-14650HX",
+            "RAM : 16GB (DDR5) = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe",
+            "Display : 16-inch FHD+ 165Hz DCI-P3:100.00%",
+            "VGA 2 : NVIDIA RTX 5050 8GB",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet Keyboard Per-Key RGB",
+            "Color : Volt Green | Weight: 3.0Kg"
+        ],
+        price : 1649,
+    },
+    {
+        title : "ROG Strix G16 | G615JHR-RV073W",
+        image : "/assets/img/rog/strix1.png",
+        specs : [
+            "CPU : 14th Gen Intel® Core™ i7-14650HX",
+            "RAM : 16GB (DDR5) = 32GB = $xxx",
+            "SSD : 512GB + 1TB M.2 PCIe",
+            "Display : 16-inch FHD+ 165Hz DCI-P3:100.00%",
+            "VGA 2 : NVIDIA RTX 5050 8GB",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet Keyboard Per-Key RGB",
+            "Color : Volt Green | Weight: 3.0Kg"
+        ],
+        price : 1729,
+    },
+    {
+        title : "ROG Strix G16 | G615JHR-RV073W",
+        image : "/assets/img/rog/strix1.png",
+        specs : [
+            "CPU : 14th Gen Intel® Core™ i7-14650HX",
+            "RAM : 16GB (DDR5) = 32GB = $xxx",
+            "SSD : 2TB M.2 PCIe",
+            "Display : 16-inch FHD+ 165Hz DCI-P3:100.00%",
+            "VGA 2 : NVIDIA RTX 5050 8GB",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet Keyboard Per-Key RGB",
+            "Color : Volt Green | Weight: 3.0Kg"
+        ],
+        price : 1779,
+    },
+    {
+        title : "ROG Strix G16 | G615JHR-RV073W",
+        image : "/assets/img/rog/strix1.png",
+        specs : [
+            "CPU : 14th Gen Intel® Core™ i7-14650HX",
+            "RAM : 16GB (DDR5) = 32GB = $xxx",
+            "SSD : 512GB + 2TB M.2 PCIe",
+            "Display : 16-inch FHD+ 165Hz DCI-P3:100.00%",
+            "VGA 2 : NVIDIA RTX 5050 8GB",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet Keyboard Per-Key RGB",
+            "Color : Volt Green | Weight: 3.0Kg"
+        ],
+        price : 1859,
+    },
 
-        ]
-        price : 
-    }
+    {
+        title : "ROG Strix G16 | G615JMR-RV163W",
+        image : "/assets/img/rog/strix1.png",
+        specs : [
+            "CPU : 14th Gen Intel Core i7-14650HX",
+            "RAM : 16GB (DDR5) = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 16-inch FHD+ 165Hz DCI-P3:100.00%",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet Keyboard Per-Key RGB",
+            "Color : Volt Green | Weight: 3.0Kg"
+        ],
+        price : 1749,
+    },
+    {
+        title : "ROG Strix G16 | G615JMR-RV163W",
+        image : "/assets/img/rog/strix1.png",
+        specs : [
+            "CPU : 14th Gen Intel Core i7-14650HX",
+            "RAM : 16GB (DDR5) = 32GB = $xxx",
+            "SSD : 512GB + 1TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 16-inch FHD+ 165Hz DCI-P3:100.00%",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet Keyboard Per-Key RGB",
+            "Color : Volt Green | Weight: 3.0Kg"
+        ],
+        price : 1749,
+    },
+    {
+        title : "ROG Strix G16 | G615JMR-RV163W",
+        image : "/assets/img/rog/strix1.png",
+        specs : [
+            "CPU : 14th Gen Intel Core i7-14650HX",
+            "RAM : 16GB (DDR5) = 32GB = $xxx",
+            "SSD : 2TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 16-inch FHD+ 165Hz DCI-P3:100.00%",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet Keyboard Per-Key RGB",
+            "Color : Volt Green | Weight: 3.0Kg"
+        ],
+        price : 1749,
+    },
+    {
+        title : "ROG Strix G16 | G615JMR-RV163W",
+        image : "/assets/img/rog/strix1.png",
+        specs : [
+            "CPU : 14th Gen Intel Core i7-14650HX",
+            "RAM : 16GB (DDR5) = 32GB = $xxx",
+            "SSD : 512GB + 2TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 16-inch FHD+ 165Hz DCI-P3:100.00%",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet Keyboard Per-Key RGB",
+            "Color : Volt Green | Weight: 3.0Kg"
+        ],
+        price : 1959,
+    },
+
+    {
+        title : "ROG Strix G18 | G815JMR-S9071W",
+        image : "/assets/img/rog/strix1.png",
+        specs : [
+            "CPU : 14th Gen Intel Core i7-14650HX",
+            "RAM : 16GB (DDR5) = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 18-inch 2.5K 240Hz DCI-P3:100.00%",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet Keyboard Per-Key RGB",
+            "Color : Volt Green | Weight: 3.2Kg"
+        ],
+        price : 1949,
+    },
+    {
+        title : "ROG Strix G18 | G815JMR-S9071W",
+        image : "/assets/img/rog/strix1.png",
+        specs : [
+            "CPU : 14th Gen Intel Core i7-14650HX",
+            "RAM : 16GB (DDR5) = 32GB = $xxx",
+            "SSD : 512GB + 1TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 18-inch 2.5K 240Hz DCI-P3:100.00%",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet Keyboard Per-Key RGB",
+            "Color : Volt Green | Weight: 3.2Kg"
+        ],
+        price : 1029,
+    },
+    {
+        title : "ROG Strix G18 | G815JMR-S9071W",
+        image : "/assets/img/rog/strix1.png",
+        specs : [
+            "CPU : 14th Gen Intel Core i7-14650HX",
+            "RAM : 16GB (DDR5) = 32GB = $xxx",
+            "SSD : 2TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 18-inch 2.5K 240Hz DCI-P3:100.00%",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet Keyboard Per-Key RGB",
+            "Color : Volt Green | Weight: 3.2Kg"
+        ],
+        price : 2079,
+    },
+    {
+        title : "ROG Strix G18 | G815JMR-S9071W",
+        image : "/assets/img/rog/strix1.png",
+        specs : [
+            "CPU : 14th Gen Intel Core i7-14650HX",
+            "RAM : 16GB (DDR5) = 32GB = $xxx",
+            "SSD : 512GB + 2TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 18-inch 2.5K 240Hz DCI-P3:100.00%",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet Keyboard Per-Key RGB",
+            "Color : Volt Green | Weight: 3.2Kg"
+        ],
+        price : 2159,
+    },
+
+    {
+        title : "ROG Strix G18 | G815JMR-S9071W",
+        image : "/assets/img/rog/strix1.png",
+        specs : [
+            "CPU : 14th Gen Intel Core i7-14650HX",
+            "RAM : 16GB (DDR5) = 32GB = $xxx",
+            "SSD : 512GB + 2TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 18-inch 2.5K 240Hz DCI-P3:100.00%",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet Keyboard Per-Key RGB",
+            "Color : Volt Green | Weight: 3.2Kg"
+        ],
+        price : 1949,
+    },
 ]
