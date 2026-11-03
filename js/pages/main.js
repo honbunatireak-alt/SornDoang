@@ -809,3 +809,15 @@ lenovo_category.map((item, index) => {
     `;
 })
 lenovo_section.innerHTML = lenovo_html;
+
+const rog_section = document.getElementById('rog')
+const rog_category = [
+    {
+        title : ""
+        image : ""
+        specs : [
+
+        ]
+        price : 
+    }
+]
