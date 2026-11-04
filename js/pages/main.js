@@ -1777,3 +1777,1108 @@ rog_category.map((item, index) => {
     `
 })
 rog_section.innerHTML = rog_html;
+
+const msi_section = document.getElementById('msi')
+const msi_category = [
+    {
+        title : "Cyborg 15 Black Edition A13VE-2448KH",
+        image : "/assets/img/msi/cyborg1.png",
+        specs : [
+            "CPU : 13th Gen Intel Core I5-13420H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 4050 6GB GDDR6",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1049,
+    },
+    {
+        title : "Cyborg 15 Black Edition A13VE-2448KH",
+        image : "/assets/img/msi/cyborg1.png",
+        specs : [
+            "CPU : 13th Gen Intel Core I5-13420H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 4050 6GB GDDR6",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1139,
+    },
+    {
+        title : "Cyborg 15 Black Edition A13VE-2448KH",
+        image : "/assets/img/msi/cyborg1.png",
+        specs : [
+            "CPU : 13th Gen Intel Core I5-13420H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 2TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 4050 6GB GDDR6",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1269,
+    },
+    {
+        title : "Cyborg 15 Black Edition A13VE-2448KH",
+        image : "/assets/img/msi/cyborg1.png",
+        specs : [
+            "CPU : 13th Gen Intel Core I5-13420H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 2TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 4050 6GB GDDR6",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1269,
+    },
+
+    {
+        title : "Cyborg 15 Edition A13VEO 2601KH",
+        image : "/assets/img/msi/cyborg1.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 4050 6GB GDDR6",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1099,
+    },
+    {
+        title : "Cyborg 15 Edition A13VEO 2601KH",
+        image : "/assets/img/msi/cyborg1.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 4050 6GB GDDR6",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1189,
+    },
+    {
+        title : "Cyborg 15 Edition A13VEO 2601KH",
+        image : "/assets/img/msi/cyborg1.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 2TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 4050 6GB GDDR6",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1319,
+    },
+    {
+        title : "Cyborg 15 Edition A13VEO 2601KH",
+        image : "/assets/img/msi/cyborg1.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 2TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 4050 6GB GDDR6",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1319,
+    },
+
+    {
+        title : "Cyborg 15 Edition A13VEO 2601KH",
+        image : "/assets/img/msi/cyborg2.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1249,
+    },
+    {
+        title : "Cyborg 15 Edition A13VEO 2601KH",
+        image : "/assets/img/msi/cyborg2.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1339,
+    },
+    {
+        title : "Cyborg 15 Edition A13VEO 2601KH",
+        image : "/assets/img/msi/cyborg2.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 2TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1469,
+    },
+    {
+        title : "Cyborg 15 Edition A13VEO 2601KH",
+        image : "/assets/img/msi/cyborg2.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 2TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1469,
+    },
+
+    {
+        title : "Cyborg 15 Edition A13VEO 2601KH",
+        image : "/assets/img/msi/cyborg2.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5060 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1249,
+    },
+    {
+        title : "Cyborg 15 Edition A13VEO 2601KH",
+        image : "/assets/img/msi/cyborg2.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5060 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1339,
+    },
+    {
+        title : "Cyborg 15 Edition A13VEO 2601KH",
+        image : "/assets/img/msi/cyborg2.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 2TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5060 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1469,
+    },
+    {
+        title : "Cyborg 15 Edition A13VEO 2601KH",
+        image : "/assets/img/msi/cyborg2.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 2TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5060 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : Backlight Key (Single-Color blue)",
+            "Color : Translucent Black | Weight : 1.98Kg"
+        ],
+        price : 1469,
+    },
+
+    {
+        title : "MSI Cyborg 15 B13WEKG 872KH",
+        image : "/assets/img/msi/cyborg3.png",
+        specs : [
+            "CPU : 13th Gen Intel Core I5-13420H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Translucent Black | Weight : 2.1Kg"
+        ],
+        price : 1029,
+    },
+    {
+        title : "MSI Cyborg 15 B13WEKG 872KH",
+        image : "/assets/img/msi/cyborg3.png",
+        specs : [
+            "CPU : 13th Gen Intel Core I5-13420H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Translucent Black | Weight : 2.1Kg"
+        ],
+        price : 1119,
+    },
+    {
+        title : "MSI Cyborg 15 B13WEKG (621KHNN)",
+        image : "/assets/img/msi/cyborg3.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Translucent Black | Weight : 2.1Kg"
+        ],
+        price : 1379,
+    },
+    {
+        title : "MSI Cyborg 15 B13WEKG (621KHNN)",
+        image : "/assets/img/msi/cyborg3.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Translucent Black | Weight : 2.1Kg"
+        ],
+        price : 1469,
+    },
+
+    {
+        title : "MSI Cyborg 15 B2RWEKG 828KHNN",
+        image : "/assets/img/msi/cyborg3.png",
+        specs : [
+            "CPU : Intel Core 7 240H Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Translucent Black | Weight : 2.1Kg"
+        ],
+        price : 1139,
+    },
+    {
+        title : "MSI Cyborg 15 B2RWEKG 828KHNN",
+        image : "/assets/img/msi/cyborg3.png",
+        specs : [
+            "CPU : Intel Core 7 240H Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Translucent Black | Weight : 2.1Kg"
+        ],
+        price : 1229,
+    },
+    {
+        title : "MSI Cyborg 15 B13WFKG 620KH",
+        image : "/assets/img/msi/cyborg3.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Translucent Black | Weight : 2.1Kg"
+        ],
+        price : 1449,
+    },
+    {
+        title : "MSI Cyborg 15 B13WFKG 620KH",
+        image : "/assets/img/msi/cyborg3.png",
+        specs : [
+            "CPU : 13th Gen Intel Core i7 13620H",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Translucent Black | Weight : 2.1Kg"
+        ],
+        price : 1539,
+    },
+
+    {
+        title : "MSI Cyborg 17 B13WEKG 257KH",
+        image : "/assets/img/msi/cyborg3.png",
+        specs : [
+            "CPU : Intel Core 7 240H Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Translucent Black | Weight : 2.1Kg"
+        ],
+        price : 1209,
+    },
+    {
+        title : "MSI Cyborg 17 B13WEKG 257KH",
+        image : "/assets/img/msi/cyborg3.png",
+        specs : [
+            "CPU : Intel Core 7 240H Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Translucent Black | Weight : 2.1Kg"
+        ],
+        price : 1299,
+    },
+    {
+        title : "MSI Cyborg 17 B13WEKG 257KH",
+        image : "/assets/img/msi/cyborg3.png",
+        specs : [
+            "CPU : Intel Core 7 240H Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Translucent Black | Weight : 2.1Kg"
+        ],
+        price : 1209,
+    },
+    {
+        title : "MSI Cyborg 17 B13WEKG 257KH",
+        image : "/assets/img/msi/cyborg3.png",
+        specs : [
+            "CPU : Intel Core 7 240H Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe 4",
+            "GPU : NVIDIA RTX 5050 8GB GDDR7",
+            "Display : 15.6” FHD (1920x1080), IPS-Level 144Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Translucent Black | Weight : 2.1Kg"
+        ],
+        price : 1229,
+    },
+
+    {
+        title : "CROSSHAIR 16 HX E14WFK 040KH",
+        image : "/assets/img/msi/crosshair1.png",
+        specs : [
+            "CPU : Intel Core i7 14650HX Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB",
+            "Display : 16” QHD+ (2560x1600) 240Hz IPS-Level",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Core Black | Weight : 2.3Kg"
+        ],
+        price : 1699,
+    },
+    {
+        title : "CROSSHAIR 16 HX E14WFK 040KH",
+        image : "/assets/img/msi/crosshair1.png",
+        specs : [
+            "CPU : Intel Core i7 14650HX Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB + 512GB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB",
+            "Display : 16” QHD+ (2560x1600) 240Hz IPS-Level",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Core Black | Weight : 2.3Kg"
+        ],
+        price : 1779,
+    },
+    {
+        title : "CROSSHAIR 16 HX E14WFK 040KH",
+        image : "/assets/img/msi/crosshair1.png",
+        specs : [
+            "CPU : Intel Core i7 14650HX Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB + 1TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB",
+            "Display : 16” QHD+ (2560x1600) 240Hz IPS-Level",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Core Black | Weight : 2.3Kg"
+        ],
+        price : 1869,
+    },
+    {
+        title : "CROSSHAIR 16 HX E14WFK 040KH",
+        image : "/assets/img/msi/crosshair1.png",
+        specs : [
+            "CPU : Intel Core i7 14650HX Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB + 2TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB",
+            "Display : 16” QHD+ (2560x1600) 240Hz IPS-Level",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming Keyboard",
+            "Color : Core Black | Weight : 2.3Kg"
+        ],
+        price : 1999,
+    },
+
+    {
+        title : "MSI CROSSHAIR 16 HX AI D2XWFKG 044KH",
+        image : "/assets/img/msi/crosshair2.png",
+        specs : [
+            "CPU : Intel Core Ultra 9-275HX",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 16” QHD+ (2560x1600) 240Hz IPS-Level",
+            "OS : Windows 11 License",
+            "Keyboard : 24-Zone RGB Gaming Keyboard",
+            "Color : Cosmos Gray | Weight : 2.7Kg"
+        ],
+        price : 1699,
+    },
+    {
+        title : "MSI CROSSHAIR 16 HX AI D2XWFKG 044KH",
+        image : "/assets/img/msi/crosshair2.png",
+        specs : [
+            "CPU : Intel Core Ultra 9-275HX",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB + 1TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 16” QHD+ (2560x1600) 240Hz IPS-Level",
+            "OS : Windows 11 License",
+            "Keyboard : 24-Zone RGB Gaming Keyboard",
+            "Color : Cosmos Gray | Weight : 2.7Kg"
+        ],
+        price : 1779,
+    },
+    {
+        title : "MSI CROSSHAIR 16 HX AI D2XWFKG 044KH",
+        image : "/assets/img/msi/crosshair2.png",
+        specs : [
+            "CPU : Intel Core Ultra 9-275HX",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 2TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 16” QHD+ (2560x1600) 240Hz IPS-Level",
+            "OS : Windows 11 License",
+            "Keyboard : 24-Zone RGB Gaming Keyboard",
+            "Color : Cosmos Gray | Weight : 2.7Kg"
+        ],
+        price : 1829,
+    },
+    {
+        title : "MSI CROSSHAIR 16 HX AI D2XWFKG 044KH",
+        image : "/assets/img/msi/crosshair2.png",
+        specs : [
+            "CPU : Intel Core Ultra 9-275HX",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB + 2TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 16” QHD+ (2560x1600) 240Hz IPS-Level",
+            "OS : Windows 11 License",
+            "Keyboard : 24-Zone RGB Gaming Keyboard",
+            "Color : Cosmos Gray | Weight : 2.7Kg"
+        ],
+        price : 1909,
+    },
+
+    {
+        title : "MSI CROSSHAIR 16 HX AI D2XWGKG 033KH",
+        image : "/assets/img/msi/crosshair2.png",
+        specs : [
+            "CPU : Intel Core Ultra 9-275HX",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 1TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5070 8GB DDR7",
+            "Display : 16” QHD+ (2560x1600) 240Hz IPS-Level",
+            "OS : Windows 11 License",
+            "Keyboard : 24-Zone RGB Gaming Keyboard",
+            "Color : Cosmos Gray | Weight : 2.7Kg"
+        ],
+        price : 1799,
+    },
+    {
+        title : "MSI CROSSHAIR 16 HX AI D2XWGKG 033KH",
+        image : "/assets/img/msi/crosshair2.png",
+        specs : [
+            "CPU : Intel Core Ultra 9-275HX",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB + 1TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5070 8GB DDR7",
+            "Display : 16” QHD+ (2560x1600) 240Hz IPS-Level",
+            "OS : Windows 11 License",
+            "Keyboard : 24-Zone RGB Gaming Keyboard",
+            "Color : Cosmos Gray | Weight : 2.7Kg"
+        ],
+        price : 1879,
+    },
+    {
+        title : "MSI CROSSHAIR 16 HX AI D2XWGKG 033KH",
+        image : "/assets/img/msi/crosshair2.png",
+        specs : [
+            "CPU : Intel Core Ultra 9-275HX",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 2TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5070 8GB DDR7",
+            "Display : 16” QHD+ (2560x1600) 240Hz IPS-Level",
+            "OS : Windows 11 License",
+            "Keyboard : 24-Zone RGB Gaming Keyboard",
+            "Color : Cosmos Gray | Weight : 2.7Kg"
+        ],
+        price : 1929,
+    },
+    {
+        title : "MSI CROSSHAIR 16 HX AI D2XWGKG 033KH",
+        image : "/assets/img/msi/crosshair2.png",
+        specs : [
+            "CPU : Intel Core Ultra 9-275HX",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB + 2TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5070 8GB DDR7",
+            "Display : 16” QHD+ (2560x1600) 240Hz IPS-Level",
+            "OS : Windows 11 License",
+            "Keyboard : 24-Zone RGB Gaming Keyboard",
+            "Color : Cosmos Gray | Weight : 2.7Kg"
+        ],
+        price : 2009,
+    },
+
+    {
+        title : "MSI Crosshair A16 HX MLG Edition E8WGK-217KH",
+        image : "/assets/img/msi/crosshair3.png",
+        specs : [
+            "CPU : AMD Ryzen 9 8940HX Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 16\" QHD+ 240Hz 100% DCI-P3",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming",
+            "Color : Stellar White | Weight : 2.3Kg"
+        ],
+        price : 1899,
+    },
+    {
+        title : "MSI Crosshair A16 HX MLG Edition E8WGK-217KH",
+        image : "/assets/img/msi/crosshair3.png",
+        specs : [
+            "CPU : AMD Ryzen 9 8940HX Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 1TB PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 16\" QHD+ 240Hz 100% DCI-P3",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming",
+            "Color : Stellar White | Weight : 2.3Kg"
+        ],
+        price : 1989,
+    },
+    {
+        title : "MSI Crosshair A16 HX MLG Edition E8WGK-217KH",
+        image : "/assets/img/msi/crosshair3.png",
+        specs : [
+            "CPU : AMD Ryzen 9 8940HX Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 2TB PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 16\" QHD+ 240Hz 100% DCI-P3",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming",
+            "Color : Stellar White | Weight : 2.3Kg"
+        ],
+        price : 2119,
+    },
+    {
+        title : "MSI Crosshair A16 HX MLG Edition E8WGK-217KH",
+        image : "/assets/img/msi/crosshair3.png",
+        specs : [
+            "CPU : AMD Ryzen 9 8940HX Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB + 2TB PCIe",
+            "GPU : NVIDIA RTX 5060 8GB DDR7",
+            "Display : 16\" QHD+ 240Hz 100% DCI-P3",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming",
+            "Color : Stellar White | Weight : 2.3Kg"
+        ],
+        price : 2199,
+    },
+
+    {
+        title : "MSI Crosshair A16 HX MLG Edition E8WGK-216KH",
+        image : "/assets/img/msi/crosshair3.png",
+        specs : [
+            "CPU : AMD Ryzen 9 8940HX Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 1TB PCIe",
+            "GPU : NVIDIA RTX 5070 8GB DDR7",
+            "Display : 16\" QHD+ 240Hz 100% DCI-P3",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming",
+            "Color : Stellar White | Weight : 2.3Kg"
+        ],
+        price : 2299,
+    },
+    {
+        title : "MSI Crosshair A16 HX MLG Edition E8WGK-216KH",
+        image : "/assets/img/msi/crosshair3.png",
+        specs : [
+            "CPU : AMD Ryzen 9 8940HX Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB + 1TB PCIe",
+            "GPU : NVIDIA RTX 5070 8GB DDR7",
+            "Display : 16\" QHD+ 240Hz 100% DCI-P3",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming",
+            "Color : Stellar White | Weight : 2.3Kg"
+        ],
+        price : 2379,
+    },
+    {
+        title : "MSI Crosshair A16 HX MLG Edition E8WGK-216KH",
+        image : "/assets/img/msi/crosshair3.png",
+        specs : [
+            "CPU : AMD Ryzen 9 8940HX Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 2TB PCIe",
+            "GPU : NVIDIA RTX 5070 8GB DDR7",
+            "Display : 16\" QHD+ 240Hz 100% DCI-P3",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming",
+            "Color : Stellar White | Weight : 2.3Kg"
+        ],
+        price : 2429,
+    },
+    {
+        title : "MSI Crosshair A16 HX MLG Edition E8WGK-216KH",
+        image : "/assets/img/msi/crosshair3.png",
+        specs : [
+            "CPU : AMD Ryzen 9 8940HX Processor",
+            "RAM : 16GB DDR5 = 32GB = $xxx",
+            "SSD : 512GB + 2TB PCIe",
+            "GPU : NVIDIA RTX 5070 8GB DDR7",
+            "Display : 16\" QHD+ 240Hz 100% DCI-P3",
+            "OS : Windows 11 License",
+            "Keyboard : 4-Zone RGB Gaming",
+            "Color : Stellar White | Weight : 2.3Kg"
+        ],
+        price : 2509,
+    },
+    //vector
+    {
+        title : "MSI VECTOR A18 HX A9WIG 096KH",
+        image : "/assets/img/msi/vector.png",
+        specs : [
+            "CPU : Ryzen 9 9955HX-Processors",
+            "RAM : 32GB (DDR5) = 64GB = $xxx",
+            "SSD : 1TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5080 16GB DDR7",
+            "Display : 18” QHD+ (2560x1600), IPS-Level 240Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 26-Zone RGB Gaming",
+            "Color : Cosmos Gray | Weight : 3.6Kg"
+        ],
+        price : 2999,
+    },
+    {
+        title : "MSI VECTOR A18 HX A9WIG 096KH",
+        image : "/assets/img/msi/vector.png",
+        specs : [
+            "CPU : Ryzen 9 9955HX-Processors",
+            "RAM : 512GB +1TB M.2 PCIe",
+            "SSD : 1TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5080 16GB DDR7",
+            "Display : 18” QHD+ (2560x1600), IPS-Level 240Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 26-Zone RGB Gaming",
+            "Color : Cosmos Gray | Weight : 3.6Kg"
+        ],
+        price : 3079,
+    },
+    {
+        title : "MSI VECTOR A18 HX A9WIG 096KH",
+        image : "/assets/img/msi/vector.png",
+        specs : [
+            "CPU : Ryzen 9 9955HX-Processors",
+            "RAM : 32GB (DDR5) = 64GB = $xxx",
+            "SSD : 2TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5080 16GB DDR7",
+            "Display : 18” QHD+ (2560x1600), IPS-Level 240Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 26-Zone RGB Gaming",
+            "Color : Cosmos Gray | Weight : 3.6Kg"
+        ],
+        price : 3129,
+    },
+    {
+        title : "MSI VECTOR A18 HX A9WIG 096KH",
+        image : "/assets/img/msi/vector.png",
+        specs : [
+            "CPU : Ryzen 9 9955HX-Processors",
+            "RAM : 32GB (DDR5) = 64GB = $xxx",
+            "SSD : 512GB +2TB M.2 PCIe",
+            "GPU : NVIDIA RTX 5080 16GB DDR7",
+            "Display : 18” QHD+ (2560x1600), IPS-Level 240Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 26-Zone RGB Gaming",
+            "Color : Cosmos Gray | Weight : 3.6Kg"
+        ],
+        price : 3209,
+    },
+    //titan
+    {
+        title : "TITAN 18 HX DRAGON EDITION DRACO EPIC A2WJ-1284KH",
+        image : "/assets/img/msi/titan.png",
+        specs : [
+            "CPU : Intel Core Ultra 9 290HX Plus",
+            "RAM : 96GB DDR5 (48GB*2) 6400MHz",
+            "SSD : 2TB G5 + 2TB G4",
+            "GPU : NVIDIA RTX 5090 24GB GDDR7",
+            "Display : 18” UHD+ (3840x2400), MiniLED 240Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 26-Zone RGB Gaming",
+            "Color : Dragon Edition Draco Epic | Weight : 3.6Kg"
+        ],
+        price : 6899,
+    },
+    {
+        title : "TITAN 18 HX DRAGON EDITION DRACO EPIC A2WJ-1284KH",
+        image : "/assets/img/msi/titan.png",
+        specs : [
+            "CPU : Intel Core Ultra 9 290HX Plus",
+            "RAM : 96GB DDR5 (48GB*2) 6400MHz",
+            "SSD : 2TB G5 + 2TB G4",
+            "GPU : NVIDIA RTX 5090 24GB GDDR7",
+            "Display : 18” UHD+ (3840x2400), MiniLED 240Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 26-Zone RGB Gaming",
+            "Color : Dragon Edition Draco Epic | Weight : 3.6Kg"
+        ],
+        price : 6899,
+    },
+    {
+        title : "TITAN 18 HX DRAGON EDITION DRACO EPIC A2WJ-1284KH",
+        image : "/assets/img/msi/titan.png",
+        specs : [
+            "CPU : Intel Core Ultra 9 290HX Plus",
+            "RAM : 96GB DDR5 (48GB*2) 6400MHz",
+            "SSD : 2TB G5 + 2TB G4",
+            "GPU : NVIDIA RTX 5090 24GB GDDR7",
+            "Display : 18” UHD+ (3840x2400), MiniLED 240Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 26-Zone RGB Gaming",
+            "Color : Dragon Edition Draco Epic | Weight : 3.6Kg"
+        ],
+        price : 6899,
+    },
+    {
+        title : "TITAN 18 HX DRAGON EDITION DRACO EPIC A2WJ-1284KH",
+        image : "/assets/img/msi/titan.png",
+        specs : [
+            "CPU : Intel Core Ultra 9 290HX Plus",
+            "RAM : 96GB DDR5 (48GB*2) 6400MHz",
+            "SSD : 2TB G5 + 2TB G4",
+            "GPU : NVIDIA RTX 5090 24GB GDDR7",
+            "Display : 18” UHD+ (3840x2400), MiniLED 240Hz",
+            "OS : Windows 11 License",
+            "Keyboard : 26-Zone RGB Gaming",
+            "Color : Dragon Edition Draco Epic | Weight : 3.6Kg"
+        ],
+        price : 6899,
+    },
+]
+
+let msi_html = "";
+msi_category.map((item, index) => {
+    msi_html += `
+        <figure>
+            <img src="${item.image}" alt="">
+            <h4>${item.title}</h4>
+            <ul>
+                ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
+            </ul>
+            <div>
+                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
+                <button>Buy Now</button>
+            </div>
+        </figure>
+    `;
+})
+msi_section.innerHTML = msi_html;
+
+const alienware_section = document.getElementById('alienware')
+const alienware_category = [
+    {
+        title : "Alienware Aurora 16 Gaming",
+        image : "/assets/img/dell/Aurora.png",
+        specs : [
+            "CPU : Intel Core 7 240H (10C/16T)",
+            "RAM : 16GB DDR5",
+            "SSD : 512GB PCIe",
+            "Display : 16\" WQXGA 120Hz",
+            "VGA 2 : NVIDIA RTX 5050 8GB GDDR7",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Keyboard",
+            "Color : Blue | Weight: 2.57Kg"
+        ],
+        price : 1299,
+    },
+    {
+        title : "Alienware Aurora 16 Gaming",
+        image : "/assets/img/dell/Aurora.png",
+        specs : [
+            "CPU : Intel Core 7 240H (10C/16T)",
+            "RAM : 32GB DDR5",
+            "SSD : 1TB PCIe",
+            "Display : 16\" WQXGA 120Hz",
+            "VGA 2 : NVIDIA RTX 5060 8GB GDDR7",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Keyboard",
+            "Color : Blue | Weight: 2.57Kg"
+        ],
+        price : 1299,
+    },
+    {
+        title : "Alienware Aurora 16 Gaming",
+        image : "/assets/img/dell/Aurora.png",
+        specs : [
+            "CPU : Intel Core 7 240H (10C/16T)",
+            "RAM : 16GB DDR5",
+            "SSD : 512GB PCIe",
+            "Display : 16\" WQXGA 120Hz",
+            "VGA 2 : NVIDIA RTX 5050 8GB GDDR7",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Keyboard",
+            "Color : Blue | Weight: 2.57Kg"
+        ],
+        price : 1299,
+    },
+    {
+        title : "Alienware Aurora 16 Gaming",
+        image : "/assets/img/dell/Aurora.png",
+        specs : [
+            "CPU : Intel Core 7 240H (10C/16T)",
+            "RAM : 32GB DDR5",
+            "SSD : 1TB PCIe",
+            "Display : 16\" WQXGA 120Hz",
+            "VGA 2 : NVIDIA RTX 5060 8GB GDDR7",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Keyboard",
+            "Color : Blue | Weight: 2.57Kg"
+        ],
+        price : 1299,
+    }
+]
+let alienware_html = ""
+alienware_category.map((item, index) => {
+    alienware_html += `
+        <figure>
+            <img src="${item.image}" alt="">
+            <h4>${item.title}</h4>
+            <ul>
+                ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
+            </ul>
+            <div>
+                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
+                <button>Buy Now</button>
+            </div>
+        </figure>
+    `
+})
+alienware_section.innerHTML = alienware_html
+const omen_section = document.getElementById('omen')
+const omen_category = [
+    {
+        title : "OMEN GAMING LAPTOP 16",
+        image : "assets/img/hp/omen1.png",
+        specs : [
+            "CPU : Intel® Core™ i7 14th generation processor",
+            "RAM : 32GB",
+            "SSD : 1TB PCIe",
+            "Display : 16\" diagonal WQXGA",
+            "GPU : NVIDIA® GeForce RTX™ 5070 8GB GDDR7",
+            "Keyboard : Single-Zone White Backlit Keyboard",
+            "OS : Windows 11 License",
+            "Weight : 2.45Kg",
+            "Color : Shadow black"
+        ],
+        price : 1999,
+    },
+    {
+        title : "OMEN GAMING LAPTOP 16-AP0097NR 16",
+        image : "assets/img/hp/omen1.png",
+        specs : [
+            "CPU : AMD Ryzen™ AI 9 processor",
+            "RAM : 32GB",
+            "SSD : 1TB PCIe",
+            "Display : 16\" diagonal WQXGA",
+            "GPU : NVIDIA® GeForce RTX™ 5070 8GB GDDR7",
+            "Keyboard : Single-Zone White Backlit Keyboard",
+            "OS : Windows 11 License",
+            "Weight : 2.45Kg",
+            "Color : Shadow black"
+        ],
+        price : 2599,
+    },
+    {
+        title : "OMEN TRANSCEND LAPTOP 16-FB0097NR 14",
+        image : "assets/img/hp/omen3.png",
+        specs : [
+            "CPU : Intel® Core™ Ultra 9 processor",
+            "RAM : 32GB",
+            "SSD : 1TB PCIe",
+            "Display : 16\" diagonal WQXGA",
+            "GPU : NVIDIA® GeForce RTX™ 4070 8GB GDDR6",
+            "Keyboard : HyperX RGB Keyboard with Translucent Keycaps",
+            "OS : Windows 11 License",
+            "Weight : 1.63Kg",
+            "Color : Shadow black, Ceramic white"
+        ],
+        price : 2249,
+    },
+    {
+        title : "OMEN TRANSCEND LAPTOP 16-FB0097NR 14",
+        image : "assets/img/hp/omen4.png",
+        specs : [
+            "CPU : Intel® Core™ Ultra 7 Series 2 processor",
+            "RAM : 32GB",
+            "SSD : 1TB PCIe",
+            "Display : 16\" diagonal WQXGA",
+            "GPU : NVIDIA® GeForce RTX™ 5060 8GB GDDR7",
+            "Keyboard : HyperX RGB Keyboard with Translucent Keycaps",
+            "OS : Windows 11 License",
+            "Weight : 1.63Kg",
+            "Color : Shadow black, Ceramic white"
+        ],
+        price : 2599,
+    },
+
+    {
+        title : "OMEN GAMING LAPTOP 16-AP0097NR 16",
+        image : "assets/img/hp/omen2.png",
+        specs : [
+            "CPU : AMD Ryzen™ AI 7 processor",
+            "RAM : 16GB",
+            "SSD : 1TB PCIe",
+            "Display : 16\" diagonal WQXGA",
+            "GPU : NVIDIA® GeForce RTX™ 5070 8GB GDDR7",
+            "Keyboard : HP OMEN 4-Zone RGB Backlit",
+            "OS : Windows 11 License",
+            "Weight : 2.45Kg",
+            "Color : Shadow black"
+        ],
+        price : 2099,
+    },
+    {
+        title : "OMEN GAMING LAPTOP 16-AP0097NR 16",
+        image : "assets/img/hp/omen2.png",
+        specs : [
+            "CPU : Intel® Core™ Ultra 7 processor",
+            "RAM : 16GB",
+            "SSD : 1TB PCIe",
+            "Display : 16\" 2K diagonal",
+            "GPU : NVIDIA® GeForce RTX™ 5070 8GB GDDR7",
+            "Keyboard : HP OMEN 4-Zone RGB Backlit",
+            "OS : Windows 11 License",
+            "Weight : 2.45Kg",
+            "Color : Shadow black"
+        ],
+        price : 2099,
+    },
+    {
+        title : "OMEN GAMING LAPTOP 16-AP0097NR 16",
+        image : "assets/img/hp/omen2.png",
+        specs : [
+            "CPU : AMD Ryzen™ AI 9 Series 2 processor",
+            "RAM : 32GB",
+            "SSD : 1TB PCIe",
+            "Display : 16\" diagonal WQXGA",
+            "GPU : NVIDIA® GeForce RTX™ 5080 16GB GDDR7",
+            "Keyboard : HP OMEN 4-Zone RGB Backlit",
+            "OS : Windows 11 License",
+            "Weight : 2.45Kg",
+            "Color : Shadow black"
+        ],
+        price : 3799,
+    },
+    {
+        title : "OMEN GAMING LAPTOP 16-AP0097NR 16",
+        image : "assets/img/hp/omen2.png",
+        specs : [
+            "CPU : AMD Ryzen™ AI 9 processor",
+            "RAM : 32GB",
+            "SSD : 1TB PCIe",
+            "Display : 16\" diagonal WQXGA",
+            "GPU : NVIDIA® GeForce RTX™ 5080 8 GB GDDR7",
+            "Keyboard : HP OMEN 4-Zone RGB Backlit",
+            "OS : Windows 11 License",
+            "Weight : 2.45Kg",
+            "Color : Shadow black"
+        ],
+        price : 3899,
+    },
+]
+let omen_html = "";
+omen_category.map((item, index) => {
+    omen_html += `
+        <figure>
+            <img src="${item.image}" alt="">
+            <h4>${item.title}</h4>
+            <ul>
+                ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
+            </ul>
+            <div>
+                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
+                <button>Buy Now</button>
+            </div>
+        </figure>
+    `
+})
+omen_section.innerHTML = omen_html;

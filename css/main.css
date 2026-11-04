@@ -186,6 +186,30 @@ header .navbar ul li a:hover{
     gap: 1rem;
     justify-content: center;
 }
+#msi{
+    margin: 1rem 1rem;
+    display: grid;
+    grid-template-columns: 350px 350px 350px 350px;
+    grid-template-rows: 655px 655px 655px 655px;
+    gap: 1rem;
+    justify-content: center;
+}
+#alienware{
+    margin: 1rem 1rem;
+    display: grid;
+    grid-template-columns: 350px 350px 350px 350px;
+    grid-template-rows: 600px;
+    gap: 1rem;
+    justify-content: center;
+}
+#omen{
+    margin: 1rem 1rem;
+    display: grid;
+    grid-template-columns: 350px 350px 350px 350px;
+    grid-template-rows: 680px 680px ;
+    gap: 1rem;
+    justify-content: center;
+}
 /* other */
 body h3{
     margin: 0.5rem 0 0.5rem 15px;
