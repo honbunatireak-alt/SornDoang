@@ -178,6 +178,14 @@ header .navbar ul li a:hover{
     gap: 1rem;
     justify-content: center;
 }
+#proart{
+    margin: 1rem 1rem;
+    display: grid;
+    grid-template-columns: 350px 350px 350px 350px;
+    grid-template-rows: 645px;
+    gap: 1rem;
+    justify-content: center;
+}
 #rog{
     margin: 1rem 1rem;
     display: grid;
@@ -210,6 +218,14 @@ header .navbar ul li a:hover{
     gap: 1rem;
     justify-content: center;
 }
+#acer{
+    margin: 1rem 1rem;
+    display: grid;
+    grid-template-columns: 350px 350px 350px 350px;
+    grid-template-rows: 620px 620px 620px 620px;
+    gap: 1rem;
+    justify-content: center;
+}
 /* other */
 body h3{
     margin: 0.5rem 0 0.5rem 15px;
@@ -239,12 +255,13 @@ section figure img{
     border-radius: 10px;
 }
 section figure ul{
+    margin: 10px 0 0 0;
     list-style-type: "_ ";
     padding-left: 0.85rem;
     box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.25);
 }
 section figure ul li{
-    font-size: 0.95rem;
+    font-size: 0.93rem;
 }
 section figure div{
     display: flex;

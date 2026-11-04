@@ -1,3 +1,15 @@
+const pageCategory = document.body.dataset.category || "all";
+const brand = {
+    apple : apple_category,
+    lenovo : lenovo_category,
+    proart : proart_category,
+    rog : rog_category,
+    msi : msi_category,
+    alienware : alienware_category,
+    omen : omen_category,
+    acer : acer_category
+};
+
 const apple_section = document.getElementById('apple');
 
 const apple_category = [
@@ -66,7 +78,7 @@ const apple_category = [
             "Magic Keyboard",
             "Weight : 1.2kg / Color : Indigo"
         ],
-        price : 739,
+        price : 849,
     },
     {
         title : "MacBook Neo A18 Pro 2026",
@@ -79,7 +91,7 @@ const apple_category = [
             "Magic Keyboard",
             "Weight : 1.2kg / Color : Indigo"
         ],
-        price : 739,
+        price : 849,
     },
     {
         title : "MacBook Neo A18 Pro 2026",
@@ -92,7 +104,7 @@ const apple_category = [
             "Magic Keyboard",
             "Weight : 1.2kg / Color : Indigo"
         ],
-        price : 739,
+        price : 849,
     },
     {
         title : "MacBook Neo A18 Pro 2026",
@@ -105,7 +117,7 @@ const apple_category = [
             "Magic Keyboard",
             "Weight : 1.2kg / Color : Indigo"
         ],
-        price : 739,
+        price : 849,
     },
     // Air Models
     // 512GB
@@ -120,7 +132,8 @@ const apple_category = [
             "Magic Keyboard",
             "Weight : 1.2kg / Color : Indigo"
         ],
-        price : 739,
+        price : 1359,
+        category : "ultrabook"
     },
     {
         title : "MacBook Air 13-inch M5 2026",
@@ -133,7 +146,8 @@ const apple_category = [
             "Magic Keyboard",
             "Weight : 1.2kg / Color : Indigo"
         ],
-        price : 739,
+        price : 1359,
+        category : "ultrabook"
     },
     {
         title : "MacBook Air 13-inch M5 2026",
@@ -146,7 +160,8 @@ const apple_category = [
             "Magic Keyboard",
             "Weight : 1.2kg / Color : Indigo"
         ],
-        price : 739,
+        price : 1359,
+        category : "ultrabook"
     },
     {
         title : "MacBook Air 13-inch M5 2026",
@@ -159,7 +174,8 @@ const apple_category = [
             "Magic Keyboard",
             "Weight : 1.2kg / Color : Indigo"
         ],
-        price : 739,
+        price : 1359,
+        category : "ultrabook"
     },
     // 1TB
     {
@@ -173,7 +189,8 @@ const apple_category = [
             "Magic Keyboard",
             "Weight : 1.2kg / Color : Indigo"
         ],
-        price : 739,
+        price : 1659,
+        category : "ultrabook"
     },
     {
         title : "MacBook Air 13-inch M5 2026",
@@ -186,7 +203,8 @@ const apple_category = [
             "Magic Keyboard",
             "Weight : 1.2kg / Color : Indigo"
         ],
-        price : 739,
+        price : 1659,
+        category : "ultrabook"
     },
     {
         title : "MacBook Air 13-inch M5 2026",
@@ -199,7 +217,8 @@ const apple_category = [
             "Magic Keyboard",
             "Weight : 1.2kg / Color : Indigo"
         ],
-        price : 739,
+        price : 1659,
+        category : "ultrabook"
     },
     {
         title : "MacBook Air 13-inch M5 2026",
@@ -212,21 +231,70 @@ const apple_category = [
             "Magic Keyboard",
             "Weight : 1.2kg / Color : Indigo"
         ],
-        price : 739,
+        price : 1659,
+        category : "ultrabook"
     },
+
     {
-        title : "MacBook Neo A18 Pro 2026",
+        title : "MacBook Pro 14-inch M5",
         image : "assets/img/apple/Pro.png",
         specs : [
-            "Apple A18 Pro Chip (6C-CPU / 5GPU)",
-            "RAM : 8GB Unified Memory",
-            "SSD : 256GB SSD",
-            "13.0-inch Liquid Retina display 500nits",
-            "Magic Keyboard",
-            "Weight : 1.2kg / Color : Indigo"
+            "CPU : Apple M5 Chip 10-Core 10 GPU",
+            "RAM : 16GB",
+            "SSD : 1TB",
+            "Display : 14-inch Liquid Retina XDR display²",
+            "Keyboard : Magic Keyboard with Touch ID",
+            "Weight : 1.55kg",
+            "Color : Black"
         ],
-        price : 739,
-    }
+        price : 2129,
+        category : "workstation"
+    },
+    {
+        title : "MacBook Pro 14-inch M5",
+        image : "assets/img/apple/pro2.png",
+        specs : [
+            "CPU : Apple M5 Chip 10-Core 10 GPU",
+            "RAM : 24GB",
+            "SSD : 1TB",
+            "Display : 14-inch Liquid Retina XDR display²",
+            "Keyboard : Magic Keyboard with Touch ID",
+            "Weight : 1.55kg",
+            "Color : Silver"
+        ],
+        price : 2359,
+        category : "workstation"
+    },
+    {
+        title : "MacBook Pro 14-inch M5",
+        image : "assets/img/apple/Pro.png",
+        specs : [
+            "CPU : Apple M5 Chip 10-Core 10 GPU",
+            "RAM : 24GB",
+            "SSD : 1TB",
+            "Display : 14-inch Liquid Retina XDR display²",
+            "Keyboard : Magic Keyboard with Touch ID",
+            "Weight : 1.55kg",
+            "Color : Black"
+        ],
+        price : 2359,
+        category : "workstation"
+    },
+    {
+        title : "MacBook Pro 14-inch M5",
+        image : "assets/img/apple/pro2.png",
+        specs : [
+            "CPU : Apple M5 Chip 10-Core 10 GPU",
+            "RAM : 32GB",
+            "SSD : 1TB",
+            "Display : 14-inch Liquid Retina XDR display²",
+            "Keyboard : Magic Keyboard with Touch ID",
+            "Weight : 1.55kg",
+            "Color : Silver"
+        ],
+        price : 2359,
+        category : "workstation"
+    },
 ]
 let apple_html = "";
 apple_category.map((item, index) => {
@@ -263,6 +331,7 @@ const lenovo_category = [
             "Weight : 0.9kg | Eclipse Black"
         ],
         price : 2299,
+        category : "ultrabook"
     },
     {
         title : "ThinkPad X1 Carbon Gen 13 Aura Edition",
@@ -277,6 +346,7 @@ const lenovo_category = [
             "Weight : 0.9kg | Eclipse Black"
         ],
         price : 2299,
+        category : "ultrabook"
     },
     {
         title : "ThinkPad X1 Carbon Gen 13 Aura Edition",
@@ -291,6 +361,7 @@ const lenovo_category = [
             "Weight : 0.9kg | Eclipse Black"
         ],
         price : 2299,
+        category : "ultrabook"
     },
     {
         title : "ThinkPad X1 Carbon Gen 13 Aura Edition",
@@ -305,6 +376,7 @@ const lenovo_category = [
             "Weight : 0.9kg | Eclipse Black"
         ],
         price : 2299,
+        category : "ultrabook"
     },
     {
         title : "Lenovo LOQ 15AHP9",
@@ -320,6 +392,7 @@ const lenovo_category = [
             "Weight : 2.23kg | Color : Luna Grey"
         ],
         price : 1299,
+        category : "gaming"
     },
     {
         title : "Lenovo LOQ 15AHP9",
@@ -335,6 +408,7 @@ const lenovo_category = [
             "Weight : 2.23kg | Color : Luna Grey"
         ],
         price : 1389,
+        category : "gaming"
     },
     {
         title : "Lenovo LOQ 15AHP9",
@@ -350,6 +424,7 @@ const lenovo_category = [
             "Weight : 2.23kg | Color : Luna Grey"
         ],
         price : 1519,
+        category : "gaming"
     },
     {
         title : "Lenovo LOQ 15AHP9",
@@ -365,6 +440,7 @@ const lenovo_category = [
             "Weight : 2.23kg | Color : Luna Grey"
         ],
         price : 1519,
+        category : "gaming"
     },
     {
         title : "Lenovo LOQ 15IRX9",
@@ -380,6 +456,7 @@ const lenovo_category = [
             "Weight : 2.23kg | Color : Luna Grey"
         ],
         price : 1499,
+        category : "gaming"
     },
     {
         title : "Lenovo LOQ 15IRX9",
@@ -395,6 +472,7 @@ const lenovo_category = [
             "Weight : 2.23kg | Color : Luna Grey"
         ],
         price : 1589,
+        category : "gaming"
     },
     {
         title : "Lenovo LOQ 15IRX9",
@@ -410,6 +488,7 @@ const lenovo_category = [
             "Weight : 2.23kg | Color : Luna Grey"
         ],
         price : 1719,
+        category : "gaming"
     },
     {
         title : "Lenovo LOQ 15IRX9",
@@ -425,6 +504,7 @@ const lenovo_category = [
             "Weight : 2.23kg | Color : Luna Grey"
         ],
         price : 1719,
+        category : "gaming"
     },
     {
         title : "Lenovo LOQ 17IRX10",
@@ -440,6 +520,7 @@ const lenovo_category = [
             "Weight : 2.9kg | Color : Luna Grey"
         ],
         price : 1699,
+        category : "gaming"
     },
     {
         title : "Lenovo LOQ 17IRX10",
@@ -455,6 +536,7 @@ const lenovo_category = [
             "Weight : 2.9kg | Color : Luna Grey"
         ],
         price : 1789,
+        category : "gaming"
     },
     {
         title : "Lenovo LOQ 17IRX10",
@@ -470,6 +552,7 @@ const lenovo_category = [
             "Weight : 2.9kg | Color : Luna Grey"
         ],
         price : 1919,
+        category : "gaming"
     },
     {
         title : "Lenovo LOQ 17IRX10",
@@ -485,6 +568,7 @@ const lenovo_category = [
             "Weight : 2.9kg | Color : Luna Grey"
         ],
         price : 1919,
+        category : "gaming"
     },
 
     {
@@ -501,6 +585,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1399,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
@@ -516,6 +601,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1489,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
@@ -531,6 +617,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1569,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
@@ -546,6 +633,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1619,
+        category : "gaming"
     },
 
     {
@@ -562,6 +650,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1399,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
@@ -577,6 +666,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1489,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
@@ -592,6 +682,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1569,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
@@ -607,6 +698,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1619,
+        category : "gaming"
     },
 
     {
@@ -623,6 +715,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1599,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
@@ -638,6 +731,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1599,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
@@ -653,6 +747,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1599,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
@@ -668,6 +763,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1599,
+        category : "gaming"
     },
 
     {
@@ -684,6 +780,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1599,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
@@ -699,6 +796,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1599,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
@@ -714,6 +812,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1599,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
@@ -729,6 +828,7 @@ const lenovo_category = [
             "Weight : 2.3Kg | Color : Eclipse Black"
         ],
         price : 1599,
+        category : "gaming"
     },
 
     {
@@ -745,6 +845,7 @@ const lenovo_category = [
             "Weight : 2.54Kg | Color : Eclipse Black"
         ],
         price : 4579,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION PRO 7 16IAX10H",
@@ -760,6 +861,7 @@ const lenovo_category = [
             "Weight : 2.54Kg | Color : Eclipse Black"
         ],
         price : 1659,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION PRO 7 16IAX10H",
@@ -775,6 +877,7 @@ const lenovo_category = [
             "Weight : 2.54Kg | Color : Eclipse Black"
         ],
         price : 4709,
+        category : "gaming"
     },
     {
         title : "LENOVO LEGION PRO 7 16IAX10H",
@@ -790,6 +893,7 @@ const lenovo_category = [
             "Weight : 2.54Kg | Color : Eclipse Black"
         ],
         price : 4789,
+        category : "gaming"
     },
 ]
 let lenovo_html = "";
@@ -809,7 +913,93 @@ lenovo_category.map((item, index) => {
     `;
 })
 lenovo_section.innerHTML = lenovo_html;
-
+const proart_section = document.getElementById('proart')
+const proart_category = [
+    {
+        title : "Asus ProArt PZ14 HT7407NA-SN023W",
+        image : "/assets/img/asus/proart1.png",
+        specs : [
+            "CPU : Snapdragon X2 Elite X2E88100",
+            "RAM : 32GB LPDDR5X",
+            "SSD : 1TB PCIe 4.0",
+            "Display : 14\" 3K OLED Touch 144hz",
+            "GPU : Qualcomm® Adreno™ GPU",
+            "OS : Windows 11 License",
+            "Keyboard : Soft Keyboard With Copilot key, Stylus",
+            "Color : Nano Black | Weight: 0.79Kg"
+        ],
+        price : 2849,
+        category : "workstation"
+    },
+    {
+        title : "Asus ProArt P16 RTX Spark H7607BA-SE328W",
+        image : "/assets/img/asus/proart3.png",
+        specs : [
+            "CPU : RTX Spark N1X 20-Core",
+            "RAM : 48GB LPDDR5X",
+            "SSD : 1TB PCIe 4.0",
+            "Display : 16\" WQUXGA OLED Touch 120Hz,100% DCI-P3",
+            "GPU : NVIDIA Blackwell RTX 6144-Core GPU",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet",
+            "Color : Nano Black",
+            "Weight: 1.77Kg"
+        ],
+        price : 4499,
+        category : "workstation"
+    },
+    {
+        title : "Asus ProArt P16 H7606WX-SE004W",
+        image : "/assets/img/asus/proart2.png",
+        specs : [
+            "CPU : AMD Ryzen™ AI 9 HX 370",
+            "RAM : 64GB LPDDR5X",
+            "SSD : 4TB PCIe",
+            "Display : 16\" 4K OLED Touch 100% DCI-P3",
+            "GPU : NVIDIA® RTX™ 5090 24GB",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet",
+            "Color : Nano Black",
+            "Weight: 1.85Kg"
+        ],
+        price : 5999,
+        category : "workstation"
+    },
+    {
+        title : "Asus ProArt P16 H7606WX-SE004W",
+        image : "/assets/img/asus/proart4.png",
+        specs : [
+            "CPU : AMD Ryzen™ AI 9 HX 370",
+            "RAM : 64GB LPDDR5X",
+            "SSD : 4TB PCIe",
+            "Display : 16\" 4K OLED Touch 100% DCI-P3",
+            "GPU : NVIDIA® RTX™ 5090 24GB",
+            "OS : Windows 11 License",
+            "Keyboard : Backlit Chiclet",
+            "Color : Nano Black",
+            "Weight: 1.85Kg"
+        ],
+        price : 5999,
+        category : "workstation"
+    },
+]
+let proart_html = ""
+proart_category.map((item, index) =>{
+    proart_html +=`
+        <figure>
+            <img src="${item.image}" alt="">
+            <h4>${item.title}</h4>
+            <ul>
+                ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
+            </ul>
+            <div>
+                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
+                <button>Buy Now</button>
+            </div>
+        </figure>
+    `
+})
+proart_section.innerHTML = proart_html;
 const rog_section = document.getElementById('rog')
 const rog_category = [
     {
@@ -826,6 +1016,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.0Kg"
         ],
         price : 1649,
+        category : "gaming"
     },
     {
         title : "ROG Strix G16 | G615JHR-RV073W",
@@ -841,6 +1032,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.0Kg"
         ],
         price : 1729,
+        category : "gaming"
     },
     {
         title : "ROG Strix G16 | G615JHR-RV073W",
@@ -856,6 +1048,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.0Kg"
         ],
         price : 1779,
+        category : "gaming"
     },
     {
         title : "ROG Strix G16 | G615JHR-RV073W",
@@ -871,6 +1064,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.0Kg"
         ],
         price : 1859,
+        category : "gaming"
     },
 
     {
@@ -887,6 +1081,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.0Kg"
         ],
         price : 1749,
+        category : "gaming"
     },
     {
         title : "ROG Strix G16 | G615JMR-RV163W",
@@ -902,6 +1097,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.0Kg"
         ],
         price : 1749,
+        category : "gaming"
     },
     {
         title : "ROG Strix G16 | G615JMR-RV163W",
@@ -917,6 +1113,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.0Kg"
         ],
         price : 1749,
+        category : "gaming"
     },
     {
         title : "ROG Strix G16 | G615JMR-RV163W",
@@ -932,6 +1129,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.0Kg"
         ],
         price : 1959,
+        category : "gaming"
     },
 
     {
@@ -948,6 +1146,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.2Kg"
         ],
         price : 1949,
+        category : "gaming"
     },
     {
         title : "ROG Strix G18 | G815JMR-S9071W",
@@ -963,6 +1162,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.2Kg"
         ],
         price : 1029,
+        category : "gaming"
     },
     {
         title : "ROG Strix G18 | G815JMR-S9071W",
@@ -978,6 +1178,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.2Kg"
         ],
         price : 2079,
+        category : "gaming"
     },
     {
         title : "ROG Strix G18 | G815JMR-S9071W",
@@ -993,6 +1194,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.2Kg"
         ],
         price : 2159,
+        category : "gaming"
     },
     //4
     {
@@ -1009,6 +1211,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.2Kg"
         ],
         price : 1949,
+        category : "gaming"
     },
     {
         title : "ROG Strix G18 | G815LP-TT145W",
@@ -1024,6 +1227,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.2Kg"
         ],
         price : 2029,
+        category : "gaming"
     },
     {
         title : "ROG Strix G18 | G815LP-TT145W",
@@ -1039,6 +1243,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.2Kg"
         ],
         price : 2079,
+        category : "gaming"
     },
     {
         title : "ROG Strix G18 | G815LP-TT145W",
@@ -1054,6 +1259,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.2Kg"
         ],
         price : 2159,
+        category : "gaming"
     },
 
     {
@@ -1070,6 +1276,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.2Kg"
         ],
         price : 2999,
+        category : "gaming"
     },
     {
         title : "ROG Strix G18 | G815LR-TT285W",
@@ -1085,6 +1292,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.2Kg"
         ],
         price : 3079,
+        category : "gaming"
     },
     {
         title : "ROG Strix G18 | G815LR-TT285W",
@@ -1100,6 +1308,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.2Kg"
         ],
         price : 3129,
+        category : "gaming"
     },
     {
         title : "ROG Strix G18 | G815LR-TT285W",
@@ -1115,6 +1324,7 @@ const rog_category = [
             "Color : Volt Green | Weight: 3.2Kg"
         ],
         price : 3209,
+        category : "gaming"
     },
 
     //strix2
@@ -1132,6 +1342,7 @@ const rog_category = [
             "Color : Off Black | Weight : 3.3Kg"
         ],
         price : 4299,
+        category : "gaming"
     },
     {
         title : "ROG STRIX SCAR 18 | G835LWG-TQ349W 1A",
@@ -1147,6 +1358,7 @@ const rog_category = [
             "Color : Off Black | Weight : 3.3Kg"
         ],
         price : 4429,
+        category : "gaming"
     },
     {
         title : "ROG STRIX SCAR 18 | G835LWG-TQ349W 1A",
@@ -1162,6 +1374,7 @@ const rog_category = [
             "Color : Off Black | Weight : 3.3Kg"
         ],
         price : 4589,
+        category : "gaming"
     },
     {
         title : "ROG STRIX SCAR 18 | G835LWG-TQ349W 1A",
@@ -1177,6 +1390,7 @@ const rog_category = [
             "Color : Off Black | Weight : 3.3Kg"
         ],
         price : 4719,
+        category : "gaming"
     },
     //2
     {
@@ -1193,6 +1407,7 @@ const rog_category = [
             "Color : Off Black | Weight : 3.3Kg"
         ],
         price : 4999,
+        category : "gaming"
     },
     {
         title : "ROG STRIX SCAR 18 | G835LXG-TQ496W",
@@ -1208,6 +1423,7 @@ const rog_category = [
             "Color : Off Black | Weight : 3.3Kg"
         ],
         price : 5129,
+        category : "gaming"
     },
     {
         title : "ROG STRIX SCAR 18 | G835LXG-TQ496W",
@@ -1223,6 +1439,7 @@ const rog_category = [
             "Color : Off Black | Weight : 3.3Kg"
         ],
         price : 5389,
+        category : "gaming"
     },
     {
         title : "ROG STRIX SCAR 18 | G835LXG-TQ496W",
@@ -1238,6 +1455,7 @@ const rog_category = [
             "Color : Off Black | Weight : 3.3Kg"
         ],
         price : 5419,
+        category : "gaming"
     },
     //strix3
     {
@@ -1254,6 +1472,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 1749,
+        category : "gaming"
     },
     {
         title : "ROG Strix G16 | G614PH-RV152W",
@@ -1269,6 +1488,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 1839,
+        category : "gaming"
     },
     {
         title : "ROG Strix G16 | G614PH-RV152W",
@@ -1284,6 +1504,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 1919,
+        category : "gaming"
     },
     {
         title : "ROG Strix G16 | G614PH-RV152W",
@@ -1299,6 +1520,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 1969,
+        category : "gaming"
     },
     //2
     {
@@ -1315,6 +1537,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 1949,
+        category : "gaming"
     },
     {
         title : "ROG Strix G16 | G614PH-RV152W",
@@ -1330,6 +1553,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 2039,
+        category : "gaming"
     },
     {
         title : "ROG Strix G16 | G614PH-RV152W",
@@ -1345,6 +1569,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 2119,
+        category : "gaming"
     },
     {
         title : "ROG Strix G16 | G614PH-RV152W",
@@ -1360,6 +1585,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 2169,
+        category : "gaming"
     },
 
     {
@@ -1376,6 +1602,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 2049,
+        category : "gaming"
     },
     {
         title : "ROG STRIX G16 | G614PP-RV115W",
@@ -1391,6 +1618,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 2129,
+        category : "gaming"
     },
     {
         title : "ROG STRIX G16 | G614PP-RV115W",
@@ -1406,6 +1634,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 2179,
+        category : "gaming"
     },
     {
         title : "ROG STRIX G16 | G614PP-RV115W",
@@ -1421,6 +1650,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 2259,
+        category : "gaming"
     },
 
     {
@@ -1437,6 +1667,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 1999,
+        category : "gaming"
     },
     {
         title : "ROG STRIX G16 | G614PP-RV192W",
@@ -1452,6 +1683,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 2089,
+        category : "gaming"
     },
     {
         title : "ROG STRIX G16 | G614PP-RV192W",
@@ -1467,6 +1699,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 2169,
+        category : "gaming"
     },
     {
         title : "ROG STRIX G16 | G614PP-RV192W",
@@ -1482,6 +1715,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 2219,
+        category : "gaming"
     },
 
     {
@@ -1498,6 +1732,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 2399,
+        category : "gaming"
     },
     {
         title : "ROG STRIX G16 | G614PR-RV151W",
@@ -1513,6 +1748,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 2489,   
+        category : "gaming"
     },
     {
         title : "ROG STRIX G16 | G614PR-RV151W",
@@ -1528,6 +1764,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 2489,   
+        category : "gaming"
     },
     {
         title : "ROG STRIX G16 | G614PR-RV151W",
@@ -1543,6 +1780,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 2619,   
+        category : "gaming"
     },
 
     {
@@ -1559,6 +1797,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 3399,   
+        category : "gaming"
     },
     {
         title : "ROG STRIX G16 | G614PR-RV151W",
@@ -1574,6 +1813,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 3479,   
+        category : "gaming"
     },
     {
         title : "ROG STRIX G16 | G614PR-RV151W",
@@ -1589,6 +1829,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 3529,   
+        category : "gaming"
     },
     {
         title : "ROG STRIX G16 | G614PR-RV151W",
@@ -1604,6 +1845,7 @@ const rog_category = [
             "Color : Volt Green | Weight : 2.5Kg"
         ],
         price : 3609,   
+        category : "gaming"
     },
     // zephyrus
     {
@@ -1620,6 +1862,7 @@ const rog_category = [
             "Color : Eclipse Gray | Weight : 1.85Kg"
         ],
         price : 2499,   
+        category : "gaming"
     },
     {
         title : "ROG Zephyrus G16 GU605CM QR132W 2E",
@@ -1635,6 +1878,7 @@ const rog_category = [
             "Color : Eclipse Gray | Weight : 1.85Kg"
         ],
         price : 2589,   
+        category : "gaming"
     },
     {
         title : "ROG Zephyrus G16 GU605CM QR132W 2E",
@@ -1650,6 +1894,7 @@ const rog_category = [
             "Color : Eclipse Gray | Weight : 1.85Kg"
         ],
         price : 1899,   
+        category : "gaming"
     },
     {
         title : "ROG Zephyrus G16 GU605CM QR132W 2E",
@@ -1665,6 +1910,7 @@ const rog_category = [
             "Color : Eclipse Gray | Weight : 1.85Kg"
         ],
         price : 2029,   
+        category : "gaming"
     },
     //2
     {
@@ -1681,6 +1927,7 @@ const rog_category = [
             "Color : Eclipse Gray | Weight : 1.85Kg"
         ],
         price : 3499,   
+        category : "gaming"
     },
     {
         title : "ROG Zephyrus G16 2026 GU606AR TB042W | AI PC",
@@ -1696,6 +1943,7 @@ const rog_category = [
             "Color : Eclipse Gray | Weight : 1.85Kg"
         ],
         price : 3629,   
+        category : "gaming"
     },
     {
         title : "ROG Zephyrus G16 2026 GU606AX-TB100W | AI PC",
@@ -1711,6 +1959,7 @@ const rog_category = [
             "Color : Eclipse Gray | Weight : 1.85Kg"
         ],
         price : 5699,   
+        category : "gaming"
     },
     {
         title : "ROG Zephyrus G16 2026 GU606AX-TB100W | AI PC",
@@ -1726,6 +1975,7 @@ const rog_category = [
             "Color : Eclipse Gray | Weight : 1.85Kg"
         ],
         price : 5699,   
+        category : "gaming"
     },
 
     {
@@ -1742,6 +1992,7 @@ const rog_category = [
             "Color : Stellar Grey | Weight : 2.82Kg"
         ],
         price : 5699,
+        category : "gaming"
     },
     {
         title : "ROG Zephyrus G16 2026 GU606AX-TB100W | AI PC",
@@ -1757,6 +2008,7 @@ const rog_category = [
             "Color : Stellar Grey | Weight : 2.82Kg"
         ],
         price : 5699,
+        category : "gaming"
     },
 ]
 
@@ -1794,6 +2046,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1049,
+        category : "gaming"
     },
     {
         title : "Cyborg 15 Black Edition A13VE-2448KH",
@@ -1809,6 +2062,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1139,
+        category : "gaming"
     },
     {
         title : "Cyborg 15 Black Edition A13VE-2448KH",
@@ -1824,6 +2078,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1269,
+        category : "gaming"
     },
     {
         title : "Cyborg 15 Black Edition A13VE-2448KH",
@@ -1839,6 +2094,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1269,
+        category : "gaming"
     },
 
     {
@@ -1855,6 +2111,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1099,
+        category : "gaming"
     },
     {
         title : "Cyborg 15 Edition A13VEO 2601KH",
@@ -1870,6 +2127,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1189,
+        category : "gaming"
     },
     {
         title : "Cyborg 15 Edition A13VEO 2601KH",
@@ -1885,6 +2143,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1319,
+        category : "gaming"
     },
     {
         title : "Cyborg 15 Edition A13VEO 2601KH",
@@ -1900,6 +2159,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1319,
+        category : "gaming"
     },
 
     {
@@ -1916,6 +2176,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1249,
+        category : "gaming"
     },
     {
         title : "Cyborg 15 Edition A13VEO 2601KH",
@@ -1931,6 +2192,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1339,
+        category : "gaming"
     },
     {
         title : "Cyborg 15 Edition A13VEO 2601KH",
@@ -1946,6 +2208,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1469,
+        category : "gaming"
     },
     {
         title : "Cyborg 15 Edition A13VEO 2601KH",
@@ -1961,6 +2224,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1469,
+        category : "gaming"
     },
 
     {
@@ -1977,6 +2241,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1249,
+        category : "gaming"
     },
     {
         title : "Cyborg 15 Edition A13VEO 2601KH",
@@ -1992,6 +2257,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1339,
+        category : "gaming"
     },
     {
         title : "Cyborg 15 Edition A13VEO 2601KH",
@@ -2007,6 +2273,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1469,
+        category : "gaming"
     },
     {
         title : "Cyborg 15 Edition A13VEO 2601KH",
@@ -2022,6 +2289,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 1.98Kg"
         ],
         price : 1469,
+        category : "gaming"
     },
 
     {
@@ -2038,6 +2306,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 2.1Kg"
         ],
         price : 1029,
+        category : "gaming"
     },
     {
         title : "MSI Cyborg 15 B13WEKG 872KH",
@@ -2053,6 +2322,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 2.1Kg"
         ],
         price : 1119,
+        category : "gaming"
     },
     {
         title : "MSI Cyborg 15 B13WEKG (621KHNN)",
@@ -2068,6 +2338,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 2.1Kg"
         ],
         price : 1379,
+        category : "gaming"
     },
     {
         title : "MSI Cyborg 15 B13WEKG (621KHNN)",
@@ -2083,6 +2354,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 2.1Kg"
         ],
         price : 1469,
+        category : "gaming"
     },
 
     {
@@ -2099,6 +2371,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 2.1Kg"
         ],
         price : 1139,
+        category : "gaming"
     },
     {
         title : "MSI Cyborg 15 B2RWEKG 828KHNN",
@@ -2114,6 +2387,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 2.1Kg"
         ],
         price : 1229,
+        category : "gaming"
     },
     {
         title : "MSI Cyborg 15 B13WFKG 620KH",
@@ -2129,6 +2403,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 2.1Kg"
         ],
         price : 1449,
+        category : "gaming"
     },
     {
         title : "MSI Cyborg 15 B13WFKG 620KH",
@@ -2144,6 +2419,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 2.1Kg"
         ],
         price : 1539,
+        category : "gaming"
     },
 
     {
@@ -2160,6 +2436,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 2.1Kg"
         ],
         price : 1209,
+        category : "gaming"
     },
     {
         title : "MSI Cyborg 17 B13WEKG 257KH",
@@ -2175,6 +2452,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 2.1Kg"
         ],
         price : 1299,
+        category : "gaming"
     },
     {
         title : "MSI Cyborg 17 B13WEKG 257KH",
@@ -2190,6 +2468,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 2.1Kg"
         ],
         price : 1209,
+        category : "gaming"
     },
     {
         title : "MSI Cyborg 17 B13WEKG 257KH",
@@ -2205,6 +2484,7 @@ const msi_category = [
             "Color : Translucent Black | Weight : 2.1Kg"
         ],
         price : 1229,
+        category : "gaming"
     },
 
     {
@@ -2221,6 +2501,7 @@ const msi_category = [
             "Color : Core Black | Weight : 2.3Kg"
         ],
         price : 1699,
+        category : "gaming"
     },
     {
         title : "CROSSHAIR 16 HX E14WFK 040KH",
@@ -2236,6 +2517,7 @@ const msi_category = [
             "Color : Core Black | Weight : 2.3Kg"
         ],
         price : 1779,
+        category : "gaming"
     },
     {
         title : "CROSSHAIR 16 HX E14WFK 040KH",
@@ -2251,6 +2533,7 @@ const msi_category = [
             "Color : Core Black | Weight : 2.3Kg"
         ],
         price : 1869,
+        category : "gaming"
     },
     {
         title : "CROSSHAIR 16 HX E14WFK 040KH",
@@ -2266,6 +2549,7 @@ const msi_category = [
             "Color : Core Black | Weight : 2.3Kg"
         ],
         price : 1999,
+        category : "gaming"
     },
 
     {
@@ -2282,6 +2566,7 @@ const msi_category = [
             "Color : Cosmos Gray | Weight : 2.7Kg"
         ],
         price : 1699,
+        category : "gaming"
     },
     {
         title : "MSI CROSSHAIR 16 HX AI D2XWFKG 044KH",
@@ -2297,6 +2582,7 @@ const msi_category = [
             "Color : Cosmos Gray | Weight : 2.7Kg"
         ],
         price : 1779,
+        category : "gaming"
     },
     {
         title : "MSI CROSSHAIR 16 HX AI D2XWFKG 044KH",
@@ -2312,6 +2598,7 @@ const msi_category = [
             "Color : Cosmos Gray | Weight : 2.7Kg"
         ],
         price : 1829,
+        category : "gaming"
     },
     {
         title : "MSI CROSSHAIR 16 HX AI D2XWFKG 044KH",
@@ -2327,6 +2614,7 @@ const msi_category = [
             "Color : Cosmos Gray | Weight : 2.7Kg"
         ],
         price : 1909,
+        category : "gaming"
     },
 
     {
@@ -2343,6 +2631,7 @@ const msi_category = [
             "Color : Cosmos Gray | Weight : 2.7Kg"
         ],
         price : 1799,
+        category : "gaming"
     },
     {
         title : "MSI CROSSHAIR 16 HX AI D2XWGKG 033KH",
@@ -2358,6 +2647,7 @@ const msi_category = [
             "Color : Cosmos Gray | Weight : 2.7Kg"
         ],
         price : 1879,
+        category : "gaming"
     },
     {
         title : "MSI CROSSHAIR 16 HX AI D2XWGKG 033KH",
@@ -2373,6 +2663,7 @@ const msi_category = [
             "Color : Cosmos Gray | Weight : 2.7Kg"
         ],
         price : 1929,
+        category : "gaming"
     },
     {
         title : "MSI CROSSHAIR 16 HX AI D2XWGKG 033KH",
@@ -2388,6 +2679,7 @@ const msi_category = [
             "Color : Cosmos Gray | Weight : 2.7Kg"
         ],
         price : 2009,
+        category : "gaming"
     },
 
     {
@@ -2404,6 +2696,7 @@ const msi_category = [
             "Color : Stellar White | Weight : 2.3Kg"
         ],
         price : 1899,
+        category : "gaming"
     },
     {
         title : "MSI Crosshair A16 HX MLG Edition E8WGK-217KH",
@@ -2419,6 +2712,7 @@ const msi_category = [
             "Color : Stellar White | Weight : 2.3Kg"
         ],
         price : 1989,
+        category : "gaming"
     },
     {
         title : "MSI Crosshair A16 HX MLG Edition E8WGK-217KH",
@@ -2434,6 +2728,7 @@ const msi_category = [
             "Color : Stellar White | Weight : 2.3Kg"
         ],
         price : 2119,
+        category : "gaming"
     },
     {
         title : "MSI Crosshair A16 HX MLG Edition E8WGK-217KH",
@@ -2449,6 +2744,7 @@ const msi_category = [
             "Color : Stellar White | Weight : 2.3Kg"
         ],
         price : 2199,
+        category : "gaming"
     },
 
     {
@@ -2465,6 +2761,7 @@ const msi_category = [
             "Color : Stellar White | Weight : 2.3Kg"
         ],
         price : 2299,
+        category : "gaming"
     },
     {
         title : "MSI Crosshair A16 HX MLG Edition E8WGK-216KH",
@@ -2480,6 +2777,7 @@ const msi_category = [
             "Color : Stellar White | Weight : 2.3Kg"
         ],
         price : 2379,
+        category : "gaming"
     },
     {
         title : "MSI Crosshair A16 HX MLG Edition E8WGK-216KH",
@@ -2495,6 +2793,7 @@ const msi_category = [
             "Color : Stellar White | Weight : 2.3Kg"
         ],
         price : 2429,
+        category : "gaming"
     },
     {
         title : "MSI Crosshair A16 HX MLG Edition E8WGK-216KH",
@@ -2510,6 +2809,7 @@ const msi_category = [
             "Color : Stellar White | Weight : 2.3Kg"
         ],
         price : 2509,
+        category : "gaming"
     },
     //vector
     {
@@ -2526,6 +2826,7 @@ const msi_category = [
             "Color : Cosmos Gray | Weight : 3.6Kg"
         ],
         price : 2999,
+        category : "gaming"
     },
     {
         title : "MSI VECTOR A18 HX A9WIG 096KH",
@@ -2541,6 +2842,7 @@ const msi_category = [
             "Color : Cosmos Gray | Weight : 3.6Kg"
         ],
         price : 3079,
+        category : "gaming"
     },
     {
         title : "MSI VECTOR A18 HX A9WIG 096KH",
@@ -2556,6 +2858,7 @@ const msi_category = [
             "Color : Cosmos Gray | Weight : 3.6Kg"
         ],
         price : 3129,
+        category : "gaming"
     },
     {
         title : "MSI VECTOR A18 HX A9WIG 096KH",
@@ -2571,6 +2874,7 @@ const msi_category = [
             "Color : Cosmos Gray | Weight : 3.6Kg"
         ],
         price : 3209,
+        category : "gaming"
     },
     //titan
     {
@@ -2587,6 +2891,7 @@ const msi_category = [
             "Color : Dragon Edition Draco Epic | Weight : 3.6Kg"
         ],
         price : 6899,
+        category : "gaming"
     },
     {
         title : "TITAN 18 HX DRAGON EDITION DRACO EPIC A2WJ-1284KH",
@@ -2602,6 +2907,7 @@ const msi_category = [
             "Color : Dragon Edition Draco Epic | Weight : 3.6Kg"
         ],
         price : 6899,
+        category : "gaming"
     },
     {
         title : "TITAN 18 HX DRAGON EDITION DRACO EPIC A2WJ-1284KH",
@@ -2617,6 +2923,7 @@ const msi_category = [
             "Color : Dragon Edition Draco Epic | Weight : 3.6Kg"
         ],
         price : 6899,
+        category : "gaming"
     },
     {
         title : "TITAN 18 HX DRAGON EDITION DRACO EPIC A2WJ-1284KH",
@@ -2632,6 +2939,7 @@ const msi_category = [
             "Color : Dragon Edition Draco Epic | Weight : 3.6Kg"
         ],
         price : 6899,
+        category : "gaming"
     },
 ]
 
@@ -2669,6 +2977,7 @@ const alienware_category = [
             "Color : Blue | Weight: 2.57Kg"
         ],
         price : 1299,
+        category : "gaming"
     },
     {
         title : "Alienware Aurora 16 Gaming",
@@ -2684,6 +2993,7 @@ const alienware_category = [
             "Color : Blue | Weight: 2.57Kg"
         ],
         price : 1299,
+        category : "gaming"
     },
     {
         title : "Alienware Aurora 16 Gaming",
@@ -2699,6 +3009,7 @@ const alienware_category = [
             "Color : Blue | Weight: 2.57Kg"
         ],
         price : 1299,
+        category : "gaming"
     },
     {
         title : "Alienware Aurora 16 Gaming",
@@ -2714,6 +3025,7 @@ const alienware_category = [
             "Color : Blue | Weight: 2.57Kg"
         ],
         price : 1299,
+        category : "gaming"
     }
 ]
 let alienware_html = ""
@@ -2750,6 +3062,7 @@ const omen_category = [
             "Color : Shadow black"
         ],
         price : 1999,
+        category : "gaming"
     },
     {
         title : "OMEN GAMING LAPTOP 16-AP0097NR 16",
@@ -2766,6 +3079,7 @@ const omen_category = [
             "Color : Shadow black"
         ],
         price : 2599,
+        category : "gaming"
     },
     {
         title : "OMEN TRANSCEND LAPTOP 16-FB0097NR 14",
@@ -2782,6 +3096,7 @@ const omen_category = [
             "Color : Shadow black, Ceramic white"
         ],
         price : 2249,
+        category : "gaming"
     },
     {
         title : "OMEN TRANSCEND LAPTOP 16-FB0097NR 14",
@@ -2792,12 +3107,13 @@ const omen_category = [
             "SSD : 1TB PCIe",
             "Display : 16\" diagonal WQXGA",
             "GPU : NVIDIA® GeForce RTX™ 5060 8GB GDDR7",
-            "Keyboard : HyperX RGB Keyboard with Translucent Keycaps",
+            "Keyboard : HyperX RGB Keyboard",
             "OS : Windows 11 License",
             "Weight : 1.63Kg",
             "Color : Shadow black, Ceramic white"
         ],
         price : 2599,
+        category : "gaming"
     },
 
     {
@@ -2815,6 +3131,7 @@ const omen_category = [
             "Color : Shadow black"
         ],
         price : 2099,
+        category : "gaming"
     },
     {
         title : "OMEN GAMING LAPTOP 16-AP0097NR 16",
@@ -2831,6 +3148,7 @@ const omen_category = [
             "Color : Shadow black"
         ],
         price : 2099,
+        category : "gaming"
     },
     {
         title : "OMEN GAMING LAPTOP 16-AP0097NR 16",
@@ -2847,6 +3165,7 @@ const omen_category = [
             "Color : Shadow black"
         ],
         price : 3799,
+        category : "gaming"
     },
     {
         title : "OMEN GAMING LAPTOP 16-AP0097NR 16",
@@ -2863,6 +3182,7 @@ const omen_category = [
             "Color : Shadow black"
         ],
         price : 3899,
+        category : "gaming"
     },
 ]
 let omen_html = "";
@@ -2882,3 +3202,283 @@ omen_category.map((item, index) => {
     `
 })
 omen_section.innerHTML = omen_html;
+const acer_section = document.getElementById('acer')
+const acer_category = [
+    // workstation
+    {
+        title : "ConceptD 5 Laptop - CN516-73G-70XD",
+        image : "/assets/img/acer/concept1.png",
+        specs : [
+            "CPU : Intel® Core™ i7-12700H processor",
+            "RAM : 32GB",
+            "SSD : 1TB",
+            "Display : 16\" WQXGA+ (3072 x 1920) 16:10",
+            "GPU : NVIDIA® GeForce RTX™ 3070Ti",
+            "OS : Windows 11 License",
+            "Keyboard : Amber Backlit",
+            "Color : Blacklight | Weight: 2.4"
+        ],
+        price : 2299,
+        category : "workstation"
+    },
+    {
+        title : "ConceptD 7 Laptop - CN715-71-73A9",
+        image : "/assets/img/acer/concept2.png",
+        specs : [
+            "CPU : Intel® Core™ i7-9750H processor",
+            "RAM : 32GB",
+            "SSD : 1TB",
+            "Display : 15.6\" 4K UHD (3840 x 2160) 16:9 IPS",
+            "GPU : NVIDIA® GeForce RTX™ 2080",
+            "OS : Windows 10 License",
+            "Keyboard : FineTip Amber-Backlit",
+            "Color : Pure White | Weight: 2.1"
+        ],
+        price : 2999,
+        category : "workstation"
+    },
+    {
+        title : "ConceptD 5 Laptop - CN516-73G-70XD",
+        image : "/assets/img/acer/concept1.png",
+        specs : [
+            "CPU : Intel® Core™ i7-12700H processor",
+            "RAM : 32GB",
+            "SSD : 1TB",
+            "Display : 16\" WQXGA+ (3072 x 1920) 16:10",
+            "GPU : NVIDIA® GeForce RTX™ 3070Ti",
+            "OS : Windows 11 License",
+            "Keyboard : Amber Backlit",
+            "Color : Blacklight | Weight: 2.4"
+        ],
+        price : 2299,
+        category : "workstation"
+    },
+    {
+        title : "ConceptD 7 Laptop - CN715-71-73A9",
+        image : "/assets/img/acer/concept2.png",
+        specs : [
+            "CPU : Intel® Core™ i7-9750H processor",
+            "RAM : 32GB",
+            "SSD : 1TB",
+            "Display : 15.6\" 4K UHD (3840 x 2160) 16:9 IPS",
+            "GPU : NVIDIA® GeForce RTX™ 2080",
+            "OS : Windows 10 License",
+            "Keyboard : FineTip Amber-Backlit",
+            "Color : Pure White | Weight: 2.1"
+        ],
+        price : 2999,
+        category : "workstation"
+    },
+    //ultrabook
+    {
+        title : "Swift Go 14 SFG14-73-51GF Notebook",
+        image : "/assets/img/acer/swift1.png",
+        specs : [
+            "CPU : Intel® Core™ Ultra 5 Series 1 125H",
+            "RAM : 16GB",
+            "SSD : 1TB",
+            "Display : 14\" 2.8K (2880 x 1800) 90 Hz",
+            "GPU : Intel® Arc™ Graphics shared memory",
+            "OS : Windows 10 License",
+            "Keyboard : black backlit",
+            "Color : Black keycaps | Weight: 1.5"
+        ],
+        price : 829,
+        category : "ultrabook"
+    },
+    {
+        title : "Swift Go 14",
+        image : "/assets/img/acer/swift1.png",
+        specs : [
+            "CPU : Intel® Core™ Ultra 5 Series 1 125H",
+            "RAM : 16GB",
+            "SSD : 512GB",
+            "Display : 35.6 cm (14\") 2.8K (2880 x 1800) 16:10 Eyesafe 90 Hz",
+            "GPU : Intel® Arc™ Graphics shared memory",
+            "OS : Windows 10 License",
+            "Keyboard : black backlit",
+            "Color : Black keycaps | Weight: 1.5"
+        ],
+        price : 759,
+        category : "ultrabook"
+    },
+    {
+        title : "Acer Swift Go 14 AI Copilot+ PC OLED",
+        image : "/assets/img/acer/swift3.png",
+        specs : [
+            "CPU : Intel® Core™ Ultra 5 processor 226V",
+            "RAM : 16GB",
+            "SSD : 512GB",
+            "Display : 14-inch 16:10 WUXGA (1920 x 1200) OLED",
+            "GPU : Intel® Arc™ Graphics shared memory",
+            "OS : Windows 10 License",
+            "Keyboard : black backlit",
+            "Color : Steam blue | Weight: 1.27"
+        ],
+        price : 999,
+        category : "ultrabook"
+    },
+    {
+        title : "Acer Swift Go 14 AI Copilot+ PC OLED Laptop",
+        image : "/assets/img/acer/swift3.png",
+        specs : [
+            "CPU : Intel® Core™ Ultra 7 processor 256V",
+            "RAM : 16GB",
+            "SSD : 1TB PCIe Gen 4",
+            "Display : 14-inch WUXGA(1920x1200)OLED",
+            "GPU : Intel® ARC Graphics 140V",
+            "OS : Windows 10 License",
+            "Keyboard : Backlit",
+            "Color : Steam blue | Weight: 1.27"
+        ],
+        price : 919,
+        category : "ultrabook"
+    },
+    // gaming
+    {
+        title : "Acer Nitro V 16",
+        image : "/assets/img/acer/nitro1.png",
+        specs : [
+            "CPU : Intel® Core™ 7 Series 2 240H",
+            "RAM : 8GB",
+            "SSD : 1TB",
+            "Display : 16\" WUXGA (1920 x 1200) 16:10 IPS 165 Hz",
+            "GPU : NVIDIA® GeForce RTX™ 5050",
+            "OS : Windows 11 License",
+            "Keyboard : RGB 4 Zones Backlight",
+            "Color : Volt Green | Weight: 2.1"
+        ],
+        price : 1899,
+        category : "gaming"
+    },
+    {
+        title : "Acer Nitro V 16",
+        image : "/assets/img/acer/nitro1.png",
+        specs : [
+            "CPU : Intel® Core™ 7 Series 2 240H",
+            "RAM : 16GB",
+            "SSD : 1TB",
+            "Display : 16\" WUXGA (1920 x 1200) 16:10 IPS 165 Hz",
+            "GPU : NVIDIA® GeForce RTX™ 5070",
+            "OS : Windows 11 License",
+            "Keyboard : RGB 4 Zones Backlight",
+            "Color : Volt Green | Weight: 2.1"
+        ],
+        price : 2399,
+        category : "gaming"
+    },
+    {
+        title : "Acer Nitro V 17 AI",
+        image : "/assets/img/acer/nitro2.png",
+        specs : [
+            "CPU : AMD Ryzen™ 5 Ryzen 200 Series",
+            "RAM : 16GB",
+            "SSD : 1TB",
+            "Display : 17.3\" Full HD (1920 x 1080) 16:9 IPS 180 Hz",
+            "GPU : NVIDIA® GeForce RTX™ 5060",
+            "OS : Windows 11 License",
+            "Keyboard : RGB 4 Zones Backlight",
+            "Color : Volt Green | Weight: 2.1"
+        ],
+        price : 2399,
+        category : "gaming"
+    },
+    {
+        title : "Acer Nitro V 16",
+        image : "/assets/img/acer/nitro2.png",
+        specs : [
+            "CPU : Intel® Core™ 7 Series 2 240H",
+            "RAM : 32GB",
+            "SSD : 512GB",
+            "Display : 16\" WUXGA (1920 x 1200) 16:10 IPS 180 Hz",
+            "GPU : NVIDIA® GeForce RTX™ 5060",
+            "OS : Windows 11 License",
+            "Keyboard : RGB 4 Zones Backlight",
+            "Color : Volt Green | Weight: 2.1"
+        ],
+        price : 1249,
+        category : "gaming"
+    },
+    // predator
+    {
+        title : "Predator Helios Neo 16",
+        image : "/assets/img/acer/predator1.png",
+        specs : [
+            "CPU : Intel® Core™ i7-14650HX",
+            "RAM : 16GB",
+            "SSD : 512GB",
+            "Display : 16\" WUXGA (1920 x 1200) 16:10 IPS 180 Hz",
+            "GPU : NVIDIA® GeForce RTX™ 5060",
+            "OS : Windows 11 License",
+            "Keyboard : RGB 4 Zones Backlight",
+            "Color : Abyssal Black | Weight: 2.8"
+        ],
+        price : 1999,
+        category : "gaming"
+    },
+    {
+        title : "Predator Helios Neo 16 AI",
+        image : "/assets/img/acer/predator1.png",
+        specs : [
+            "CPU : Intel® Core™ Ultra 9 Series 2 290HX",
+            "RAM : 32GB",
+            "SSD : 1TB",
+            "Display : 16\" WQXGA (2560 x 1600) 16:10 IPS 240 Hz",
+            "GPU : NVIDIA® GeForce RTX™ 5080",
+            "OS : Windows 11 License",
+            "Keyboard : RGB 4 Zones Backlight",
+            "Color : Abyssal Black | Weight: 2.8"
+        ],
+        price : 3249,
+        category : "gaming"
+    },
+    {
+        title : "Predator Helios 16 AI",
+        image : "/assets/img/acer/predator2.png",
+        specs : [
+            "CPU : Intel® Core™ Ultra 9 Series 2 275HX",
+            "RAM : 32GB",
+            "SSD : 1TB",
+            "Display : 16\" WQXGA (2560 x 1600) 16:10 IPS 240 Hz",
+            "GPU : NVIDIA® GeForce RTX™ 5090",
+            "OS : Windows 11 License",
+            "Keyboard : RGB 4 Zones Backlight",
+            "Color : Abyssal Black | Weight: 2.7"
+        ],
+        price : 3999,
+        category : "gaming"
+    },
+    {
+        title : "Predator Helios 16 AI",
+        image : "/assets/img/acer/predator2.png",
+        specs : [
+            "CPU : Intel® Core™ Ultra 9 Series 2 275HX",
+            "RAM : 32GB",
+            "SSD : 1TB",
+            "Display : 16\" WQXGA (2560 x 1600) 16:10 IPS 240 Hz",
+            "GPU : NVIDIA® GeForce RTX™ 5090",
+            "OS : Windows 11 License",
+            "Keyboard : RGB 4 Zones Backlight",
+            "Color : Abyssal Black | Weight: 2.7"
+        ],
+        price : 3999,
+        category : "gaming"
+    },
+]
+let acer_html = "";
+acer_category.map((item, index) => {
+    acer_html += `
+        <figure>
+            <img src="${item.image}" alt="">
+            <h4>${item.title}</h4>
+            <ul>
+                ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
+            </ul>
+            <div>
+                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
+                <button>Buy Now</button>
+            </div>
+        </figure>
+    `
+})
+acer_section.innerHTML = acer_html;
