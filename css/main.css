@@ -178,6 +178,14 @@ header .navbar ul li a:hover{
     gap: 1rem;
     justify-content: center;
 }
+#rog{
+    margin: 1rem 1rem;
+    display: grid;
+    grid-template-columns: 350px 350px 350px 350px;
+    grid-template-rows: 645px 645px 645px 645px;
+    gap: 1rem;
+    justify-content: center;
+}
 /* other */
 body h3{
     margin: 0.5rem 0 0.5rem 15px;
