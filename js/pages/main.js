@@ -3362,6 +3362,347 @@ const acer_category = [
         category : "gaming"
     },
 ]
+
+const charger_section = document.getElementById('charger')
+const charger_category =[
+    {
+        title : "UGREEN 30W USB-C GaN Fast Charger US",
+        image : "/assets/img/accessory/charger/p1.png",
+        specs : [
+            "AC input : 100~240V 800mA Max",
+            "Total Output Power : 30W Max",
+            "Support PD 3.0",
+            "Model : 55530"
+        ],
+        price : 13,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN 45W USB-C GaN Fast Charger US",
+        image : "/assets/img/accessory/charger/p2.png",
+        specs : [
+            "AC input : 100~240V 1.2A Max",
+            "Total Output Power : 45W Max",
+            "Support PD 3.0/2.0",
+            "Model : 65050B"
+        ],
+        price : 17,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN 45W USB-C GaN Fast Charger US",
+        image : "/assets/img/accessory/charger/p3.png",
+        specs : [
+            "AC input : 100~240V 1.2A Max",
+            "Total Output Power : 45W Max",
+            "Support PD 3.0",
+            "Model : 95960B"
+        ],
+        price : 19,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN Nexode 30W USB-C PD GaN Fast Charger",
+        image : "/assets/img/accessory/charger/p4.png",
+        specs : [
+            "AC input : 100~240V 1.2A Max",
+            "Total Output Power : 45W Max",
+            "Output : USB-C x2, PD3.0/2.0",
+            "Model : 90572"
+        ],
+        price : 25,
+        category : "accessory"
+    },
+
+    {
+        title : "UGREEN Nexode 30W USB-C PD GaN Fast Charger",
+        image : "/assets/img/accessory/charger/p5.png",
+        specs : [
+            "Charger US (Space Gray)",
+            "USB-C OUTPUT : (30W MAX)",
+            "Compatible : PD3.0 (PD2.0)",
+            "Model : 15550"
+        ],
+        price : 15,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN Nexode 30W USB-C PD GaN Fast Charger",
+        image : "/assets/img/accessory/charger/p6.png",
+        specs : [
+            "Charger US (Purple)",
+            "USB-C OUTPUT : (30W MAX)",
+            "Compatible : PD3.0 (PD2.0)",
+            "Model : 25036"
+        ],
+        price : 15,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN 30W Animal (Puppy) GaN Fast Charger",
+        image : "/assets/img/accessory/charger/p7.png",
+        specs : [
+            "Charger US (Puppy)",
+            "USB-C OUTPUT : (30W MAX)",
+            "Compatible : PD3.0 (PD2.0)",
+            "Model : 25036"
+        ],
+        price : 15,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN Nexode RG 65W 3 Port PD GaN Fast Charger US",
+        image : "/assets/img/accessory/charger/p8.png",
+        specs : [
+            "Charger US (Blue)",
+            "USB-C OUTPUT : (30W MAX)",
+            "Compatible : PD3.0 (PD2.0)",
+            "Model : 35856"
+        ],
+        price : 29,
+        category : "accessory"
+    },
+]
+// connector
+const connector_section = document.getElementById('connector')
+const connector_category = [
+    {
+        title : "UGREEN USB-C Video Capture Card",
+        image : "/assets/img/accessory/connector/p1.png",
+        specs : [
+            "Input : USB-C Male 4K 30Hz",
+            "Capture : USB-C/USB-A Male 2K 30Hz",
+            "Video Format : MJPEG/YUY2",
+            "Color Depth : 24-bit/30-bit/36-bit",
+            "Model : 35856"
+        ],
+        price : 35,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN USB-C Video Capture Card",
+        image : "/assets/img/accessory/connector/p2.png",
+        specs : [
+            "Input : USB-C male",
+            "Output : VGA1, HDMI",
+            "HDMI support : 3D, 4K*2K/30Hz",
+            "VGA: 1920*1200/60Hz",
+            "Model : 30843"
+        ],
+        price : 17,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN USB-C to HDMI + VGA +USB 3.0 with PD",
+        image : "/assets/img/accessory/connector/p3.png",
+        specs : [
+            "Input : USB-C male",
+            "Output : HDMI+VGA Port",
+            "HDMI 1.4b, 3D, 4K*2K 30Hz",
+            "VGA support 1080P 60Hz",
+            "HDMI+VGA support 1080P 60Hz",
+            "Support PD Charge",
+            "Model : 50505"
+        ],
+        price : 25,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN USB-C To HDMI Female Adapter",
+        image : "/assets/img/accessory/connector/p4.png",
+        specs : [
+            "Support 4K@60Hz/2K@144Hz",
+            "HDMI V2.0, support 3D",
+            "Aluminum case",
+            "Model : 70444"
+        ],
+        price : 35,
+        category : "accessory"
+    },
+
+    {
+        title : "UGREEN USB-C to HDMI 8K60Hz",
+        image : "/assets/img/accessory/connector/p5.png",
+        specs : [
+            "HDMI 2.1 : 8K60Hz 4K144Hz/240Hz",
+            "Total Bandwidth : 48Gbps",
+            "Color Depth: 8-bit/10-bit/12-bit",
+            "Pixel Formats: RGB",
+            "Supported : HDR 10, HDR 10+",
+            "Model : 85320"
+        ],
+        price : 18,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN Type c to DP Female Adapter",
+        image : "/assets/img/accessory/connector/p6.png",
+        specs : [
+            "Output : DP Female",
+            "Support 4K 60Hz/2K 144Hz",
+            "Support HPD(Hot Plug Detection)",
+            "Model : 70451",
+        ],
+        price : 12,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN TYPE-C TO DP ADAPTER 8K 60Hz",
+        image : "/assets/img/accessory/connector/p7.png",
+        specs : [
+            "Resolution : 8K60Hz 32.4Gbps",
+            "HDCP : 2.3 compatible Stream",
+            "Supported : 3D Visual Effect, HDR",
+            "Audio-to-Video Sync",
+            "Model : 15575"
+        ],
+        price : 17,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN USB-C to SD/TF + USB Card Reader",
+        image : "/assets/img/accessory/connector/p8.png",
+        specs : [
+            "Input : USB C 3.0",
+            "Output : USB-A 2.0 female",
+            "SD3.0 (UHS-I), up to 104 MB/s",
+            "TF3.0 (UHS-I), up to 104 MB/s",
+            "Model : 80798"
+        ],
+        price : 15,
+        category : "accessory"
+    }
+]
+const hubsNdocks_section = document.getElementById('hubsNdocks')
+const hubsNdocks_category = [
+    {
+        title : "UGREEN USB-C 9 in 1 Multifunction Adapter",
+        image : "/assets/img/accessory/hubsNdocks/p1.png",
+        specs : [
+            "Output : 3xUSB-A 3.0, HDMI, VGA",
+            "RJ45 (Gigabit), SD/TF, PD",
+            "HDMI 4K30Hz,VGA FHD60Hz",
+            "SD/TF 3.0 up to 104MB/s",
+            "Support : Windows / macOS / Linux",
+            "Model : 15600"
+        ],
+        price : 35,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN Revodok 8-in-1 USB-C Hub",
+        image : "/assets/img/accessory/hubsNdocks/p2.png",
+        specs : [
+            "USB-C to 2xUSB3.2 + 2xUSB-C3.2",
+            "2xHDMI 4K + 1xVGA",
+            "PD 100w port Converter",
+            "HDMI Up to 4K60Hz, VGA FHD60Hz",
+            "Dual HDMI external display 4K30Hz",
+            "Triple external display Up to FHD60Hz",
+            "Model : 35588"
+        ],
+        price : 39,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN Type-C Docking Station 9 IN 1",
+        image : "/assets/img/accessory/hubsNdocks/p3.png",
+        specs : [
+            "USB-C to 2xUSB3.0 + 2xUSB-C",
+            "HDMI+RJ45+SD&TF, PD 100W",
+            "Output : 2xUSB3.0 + 2xUSB-C",
+            "HDMI 4K60Hz + RJ45 Gigabit",
+            "SD/TF, PD",
+            "HDMI up to 4K*2K/60Hz max",
+            "PD Power Supply Port (100W)",
+            "Model : 15375"
+        ],
+        price : 39,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN 9-in-1 USB-C Dual HDMI Hub",
+        image : "/assets/img/accessory/hubsNdocks/p4.png",
+        specs : [
+            "Output : 2×HDMI, 2×USB-C",
+            "2×USB-A, SD/TF Card Slot",
+            "HDMI 4K60Hz + RJ45 Gigabit",
+            "SD/TF Card Slots up to 170MB/s",
+            "PD Power Supply Port (100W)",
+            "Model : 85774"
+        ],
+        price : 39,
+        category : "accessory"
+    },
+
+    {
+        title : "UGREEN Revodok NVMe USB C Docking Station10 in 1",
+        image : "/assets/img/accessory/hubsNdocks/p5.png",
+        specs : [
+            "Input : Type C",
+            "Output : HDMI, 3xUSB, Type-C",
+            "RJ45, SD/TF, Enclosure",
+            "HDMI:Up to 4K60Hz",
+            "TypeC, USB-A : up to 10Gbps",
+            "2xUSB-A : up to 5Gbps",
+            "RJ45 : Gigabit, SD/TF up to 170MB/s",
+            "Enclosure : Rate up 10Gbps",
+            "Model : 55735"
+        ],
+        price : 59,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN 14 IN 1 USB-C Docking Station",
+        image : "/assets/img/accessory/hubsNdocks/p6.png",
+        specs : [
+            "Output : HDMI, 2xDP, 2xType-C, PD",
+            "O3xUSB, RJ45, SD/TF, Audio",
+            "HDMI 4K60Hz, DP1/DP2 4K120Hz",
+            "2xTypeC, USB-A : up to 10Gbps",
+            "2xUSB-A : up to 5Gbps",
+            "RJ45 : Gigabit, SD/TF up to 170MB/s",
+            "PD 3.0 27W Max, DC 24V 5.83A",
+            "Model : 85489"
+        ],
+        price : 129,
+        category : "accessory"
+    },
+    {
+        title : "USB-C 12 in 1 Multifunction Docking Station Pro",
+        image : "/assets/img/accessory/hubsNdocks/p7.png",
+        specs : [
+            "Output : USB-C to 2xUSB 3.0, USB3.2",
+            "TypeC 3.2, 2xHDMI, RJ45, SD/TF, PD",
+            "SD&TF, Audio",
+            "Can Extend A-B-C-D Screen",
+            "HDMI 1 4K60Hz, DP 4K60Hz",
+            "HDMI 2 8K30Hz",
+            "2xTypeC 3.2, USB-A : up to 10Gbps",
+            "RJ45 : Gigabit, SD/TF up to 104MB/s",
+            "PD 3.0 27W Max, DC 24V 5.83A",
+            "Model : 90325"
+        ],
+        price : 169,
+        category : "accessory"
+    },
+    {
+        title : "UGREEN 11-in-1 USB-C Docking Station",
+        image : "/assets/img/accessory/hubsNdocks/p8.png",
+        specs : [
+            "Input-Port : TypeC (Mac Mini M4)",
+            "TypeC Female board 5V power",
+            "Output Port : TypeC : 2 Up to 10Gbps",
+            "USB-A : 3 Up to 10Gbps",
+            "USB-A : 2 Up to 5Gbps",
+            "SD Card TF Slot (up to 170MB/s)",
+            "M.2 : Supports M.2 NVME up to 8TB",
+            "Model : 65487"
+        ],
+        price : 55,
+        category : "accessory"
+    }
+]
 const brand = {
     apple: apple_category,
     lenovo: lenovo_category,
@@ -3370,7 +3711,10 @@ const brand = {
     msi: msi_category,
     alienware: alienware_category,
     omen: omen_category,
-    acer: acer_category
+    acer: acer_category,
+    charger: charger_category,
+    connector: connector_category,
+    hubsNdocks: hubsNdocks_category
 };
 
 Object.entries(brand).forEach(([id, products]) => renderBrand(id, products));
