@@ -1,22 +1,40 @@
 const pageCategory = document.body.dataset.category || "all";
-const brand = {
-    apple : apple_category,
-    lenovo : lenovo_category,
-    proart : proart_category,
-    rog : rog_category,
-    msi : msi_category,
-    alienware : alienware_category,
-    omen : omen_category,
-    acer : acer_category
-};
 
+function renderBrand(sectionId, products) {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    const list = pageCategory === "all"
+        ? products
+        : products.filter(p => [].concat(p.category).includes(pageCategory));
+
+    section.innerHTML = list.map(item => `
+        <figure>
+            <img src="${item.image}" alt="${item.title}">
+            <h4>${item.title}</h4>
+            <ul>
+                ${item.specs.map(spec => `<li>${spec}</li>`).join("")}
+            </ul>
+            <div>
+                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
+                <button>Buy Now</button>
+            </div>
+        </figure>
+    `).join("");
+
+    // hide the brand's <h3> and the section when nothing matches this page
+    const show = list.length > 0;
+    section.style.display = show ? "" : "none";
+    const heading = section.previousElementSibling;
+    if (heading && heading.tagName === "H3") heading.style.display = show ? "" : "none";
+}
 const apple_section = document.getElementById('apple');
 
 const apple_category = [
     // 256GB
     {
         title : "MacBook Neo A18 Pro 2026",
-        image : "assets/img/apple/Neo1.png",
+        image : "/assets/img/apple/Neo1.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -29,7 +47,7 @@ const apple_category = [
     },
     {
         title : "MacBook Neo A18 Pro 2026",
-        image : "assets/img/apple/Neo2.png",
+        image : "/assets/img/apple/Neo2.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -42,7 +60,7 @@ const apple_category = [
     },
     {
         title : "MacBook Neo A18 Pro 2026",
-        image : "assets/img/apple/Neo3.png",
+        image : "/assets/img/apple/Neo3.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -55,7 +73,7 @@ const apple_category = [
     },
     {
         title : "MacBook Neo A18 Pro 2026",
-        image : "assets/img/apple/Neo4.png",
+        image : "/assets/img/apple/Neo4.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -69,7 +87,7 @@ const apple_category = [
     // 512GB
     {
         title : "MacBook Neo A18 Pro 2026",
-        image : "assets/img/apple/Neo1.png",
+        image : "/assets/img/apple/Neo1.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -82,7 +100,7 @@ const apple_category = [
     },
     {
         title : "MacBook Neo A18 Pro 2026",
-        image : "assets/img/apple/Neo2.png",
+        image : "/assets/img/apple/Neo2.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -95,7 +113,7 @@ const apple_category = [
     },
     {
         title : "MacBook Neo A18 Pro 2026",
-        image : "assets/img/apple/Neo3.png",
+        image : "/assets/img/apple/Neo3.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -108,7 +126,7 @@ const apple_category = [
     },
     {
         title : "MacBook Neo A18 Pro 2026",
-        image : "assets/img/apple/Neo4.png",
+        image : "/assets/img/apple/Neo4.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -123,7 +141,7 @@ const apple_category = [
     // 512GB
     {
         title : "MacBook Air 13-inch M5 2026",
-        image : "assets/img/apple/Air1.png",
+        image : "/assets/img/apple/Air1.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -137,7 +155,21 @@ const apple_category = [
     },
     {
         title : "MacBook Air 13-inch M5 2026",
-        image : "assets/img/apple/Air2.png",
+        image : "/assets/img/apple/Air2.png",
+        specs : [
+            "Apple A18 Pro Chip (6C-CPU / 5GPU)",
+            "RAM : 8GB Unified Memory",
+            "SSD : 512GB SSD",
+            "13.0-inch Liquid Retina display 500nits",
+            "Magic Keyboard",
+            "Weight : 1.2kg / Color : Indigo"
+        ],
+        price : 1359,
+        category : "ultrabook"
+    },
+    {
+        title : "/MacBook Air 13-inch M5 2026",
+        image : "/assets/img/apple/Air3.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -151,21 +183,7 @@ const apple_category = [
     },
     {
         title : "MacBook Air 13-inch M5 2026",
-        image : "assets/img/apple/Air3.png",
-        specs : [
-            "Apple A18 Pro Chip (6C-CPU / 5GPU)",
-            "RAM : 8GB Unified Memory",
-            "SSD : 512GB SSD",
-            "13.0-inch Liquid Retina display 500nits",
-            "Magic Keyboard",
-            "Weight : 1.2kg / Color : Indigo"
-        ],
-        price : 1359,
-        category : "ultrabook"
-    },
-    {
-        title : "MacBook Air 13-inch M5 2026",
-        image : "assets/img/apple/Air4.png",
+        image : "/assets/img/apple/Air4.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -180,7 +198,7 @@ const apple_category = [
     // 1TB
     {
         title : "MacBook Air 13-inch M5 2026",
-        image : "assets/img/apple/Air1.png",
+        image : "/assets/img/apple/Air1.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -194,7 +212,7 @@ const apple_category = [
     },
     {
         title : "MacBook Air 13-inch M5 2026",
-        image : "assets/img/apple/Air2.png",
+        image : "/assets/img/apple/Air2.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -208,7 +226,7 @@ const apple_category = [
     },
     {
         title : "MacBook Air 13-inch M5 2026",
-        image : "assets/img/apple/Air3.png",
+        image : "/assets/img/apple/Air3.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -222,7 +240,7 @@ const apple_category = [
     },
     {
         title : "MacBook Air 13-inch M5 2026",
-        image : "assets/img/apple/Air4.png",
+        image : "/assets/img/apple/Air4.png",
         specs : [
             "Apple A18 Pro Chip (6C-CPU / 5GPU)",
             "RAM : 8GB Unified Memory",
@@ -237,7 +255,7 @@ const apple_category = [
 
     {
         title : "MacBook Pro 14-inch M5",
-        image : "assets/img/apple/Pro.png",
+        image : "/assets/img/apple/Pro.png",
         specs : [
             "CPU : Apple M5 Chip 10-Core 10 GPU",
             "RAM : 16GB",
@@ -252,7 +270,7 @@ const apple_category = [
     },
     {
         title : "MacBook Pro 14-inch M5",
-        image : "assets/img/apple/pro2.png",
+        image : "/assets/img/apple/pro2.png",
         specs : [
             "CPU : Apple M5 Chip 10-Core 10 GPU",
             "RAM : 24GB",
@@ -267,7 +285,7 @@ const apple_category = [
     },
     {
         title : "MacBook Pro 14-inch M5",
-        image : "assets/img/apple/Pro.png",
+        image : "/assets/img/apple/Pro.png",
         specs : [
             "CPU : Apple M5 Chip 10-Core 10 GPU",
             "RAM : 24GB",
@@ -282,7 +300,7 @@ const apple_category = [
     },
     {
         title : "MacBook Pro 14-inch M5",
-        image : "assets/img/apple/pro2.png",
+        image : "/assets/img/apple/pro2.png",
         specs : [
             "CPU : Apple M5 Chip 10-Core 10 GPU",
             "RAM : 32GB",
@@ -296,31 +314,13 @@ const apple_category = [
         category : "workstation"
     },
 ]
-let apple_html = "";
-apple_category.map((item, index) => {
-    apple_html += `
-        <figure>
-            <img src="${item.image}" alt="">
-            <h4>${item.title}</h4>
-            <ul>
-                ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
-            </ul>
-            <div>
-                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
-                <button>Buy Now</button>
-            </div>
-        </figure>
-    `;
-});
-apple_section.innerHTML = apple_html;
-
 // lenovo
 const lenovo_section = document.getElementById('lenovo');
 
 const lenovo_category = [
     {
         title : "ThinkPad X1 Carbon Gen 13 Aura Edition",
-        image : "assets/img/Lenovo/x.png",
+        image : "/assets/img/Lenovo/x.png",
         specs : [
             "CPU : Intel Core Ultra 7 268V Processor",
             "RAM : 32GB LPDDR5X | SSD : 1TB PCIe",
@@ -335,7 +335,7 @@ const lenovo_category = [
     },
     {
         title : "ThinkPad X1 Carbon Gen 13 Aura Edition",
-        image : "assets/img/Lenovo/x.png",
+        image : "/assets/img/Lenovo/x.png",
         specs : [
             "CPU : Intel Core Ultra 7 268V Processor",
             "RAM : 32GB LPDDR5X | SSD : 2TB PCIe",
@@ -350,7 +350,7 @@ const lenovo_category = [
     },
     {
         title : "ThinkPad X1 Carbon Gen 13 Aura Edition",
-        image : "assets/img/Lenovo/x.png",
+        image : "/assets/img/Lenovo/x.png",
         specs : [
             "CPU : Intel Core Ultra 7 268V Processor",
             "RAM : 32GB LPDDR5X | SSD : 1TB PCIe",
@@ -365,7 +365,7 @@ const lenovo_category = [
     },
     {
         title : "ThinkPad X1 Carbon Gen 13 Aura Edition",
-        image : "assets/img/Lenovo/x.png",
+        image : "/assets/img/Lenovo/x.png",
         specs : [
             "CPU : Intel Core Ultra 7 268V Processor",
             "RAM : 32GB LPDDR5X | SSD : 2TB PCIe",
@@ -380,7 +380,7 @@ const lenovo_category = [
     },
     {
         title : "Lenovo LOQ 15AHP9",
-        image : "assets/img/Lenovo/loq1.png",
+        image : "/assets/img/Lenovo/loq1.png",
         specs : [
             "CPU : AMD Ryzen 7 155 (6C/12T)",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -396,7 +396,7 @@ const lenovo_category = [
     },
     {
         title : "Lenovo LOQ 15AHP9",
-        image : "assets/img/Lenovo/loq1.png",
+        image : "/assets/img/Lenovo/loq1.png",
         specs : [
             "CPU : AMD Ryzen 7 155 (6C/12T)",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -412,7 +412,7 @@ const lenovo_category = [
     },
     {
         title : "Lenovo LOQ 15AHP9",
-        image : "assets/img/Lenovo/loq1.png",
+        image : "/assets/img/Lenovo/loq1.png",
         specs : [
             "CPU : AMD Ryzen 7 155 (6C/12T)",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -428,7 +428,7 @@ const lenovo_category = [
     },
     {
         title : "Lenovo LOQ 15AHP9",
-        image : "assets/img/Lenovo/loq1.png",
+        image : "/assets/img/Lenovo/loq1.png",
         specs : [
             "CPU : AMD Ryzen 7 155 (6C/12T)",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -444,7 +444,7 @@ const lenovo_category = [
     },
     {
         title : "Lenovo LOQ 15IRX9",
-        image : "assets/img/Lenovo/loq2.png",
+        image : "/assets/img/Lenovo/loq2.png",
         specs : [
             "CPU : Intel Core i7-14650HX (16C/24T)",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -460,7 +460,7 @@ const lenovo_category = [
     },
     {
         title : "Lenovo LOQ 15IRX9",
-        image : "assets/img/Lenovo/loq2.png",
+        image : "/assets/img/Lenovo/loq2.png",
         specs : [
             "CPU : Intel Core i7-14650HX (16C/24T)",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -476,7 +476,7 @@ const lenovo_category = [
     },
     {
         title : "Lenovo LOQ 15IRX9",
-        image : "assets/img/Lenovo/loq2.png",
+        image : "/assets/img/Lenovo/loq2.png",
         specs : [
             "CPU : Intel Core i7-14650HX (16C/24T)",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -492,7 +492,7 @@ const lenovo_category = [
     },
     {
         title : "Lenovo LOQ 15IRX9",
-        image : "assets/img/Lenovo/loq2.png",
+        image : "/assets/img/Lenovo/loq2.png",
         specs : [
             "CPU : Intel Core i7-14650HX (16C/24T)",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -508,7 +508,7 @@ const lenovo_category = [
     },
     {
         title : "Lenovo LOQ 17IRX10",
-        image : "assets/img/Lenovo/loq3.png",
+        image : "/assets/img/Lenovo/loq3.png",
         specs : [
             "CPU : Intel Core i7-14700HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -524,7 +524,7 @@ const lenovo_category = [
     },
     {
         title : "Lenovo LOQ 17IRX10",
-        image : "assets/img/Lenovo/loq3.png",
+        image : "/assets/img/Lenovo/loq3.png",
         specs : [
             "CPU : Intel Core i7-14700HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -540,7 +540,7 @@ const lenovo_category = [
     },
     {
         title : "Lenovo LOQ 17IRX10",
-        image : "assets/img/Lenovo/loq3.png",
+        image : "/assets/img/Lenovo/loq3.png",
         specs : [
             "CPU : Intel Core i7-14700HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -556,7 +556,7 @@ const lenovo_category = [
     },
     {
         title : "Lenovo LOQ 17IRX10",
-        image : "assets/img/Lenovo/loq3.png",
+        image : "/assets/img/Lenovo/loq3.png",
         specs : [
             "CPU : Intel Core i7-14700HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -573,7 +573,7 @@ const lenovo_category = [
 
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion1.png",
+        image : "/assets/img/Lenovo/legion1.png",
         specs : [
             "CPU : Intel Core i7-13650HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -589,7 +589,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion1.png",
+        image : "/assets/img/Lenovo/legion1.png",
         specs : [
             "CPU : Intel Core i7-13650HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -605,7 +605,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion1.png",
+        image : "/assets/img/Lenovo/legion1.png",
         specs : [
             "CPU : Intel Core i7-13650HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -621,7 +621,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion1.png",
+        image : "/assets/img/Lenovo/legion1.png",
         specs : [
             "CPU : Intel Core i7-13650HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -638,7 +638,7 @@ const lenovo_category = [
 
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion1.png",
+        image : "/assets/img/Lenovo/legion1.png",
         specs : [
             "CPU : Intel Core i7-13650HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -654,7 +654,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion1.png",
+        image : "/assets/img/Lenovo/legion1.png",
         specs : [
             "CPU : Intel Core i7-13650HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -670,7 +670,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion1.png",
+        image : "/assets/img/Lenovo/legion1.png",
         specs : [
             "CPU : Intel Core i7-13650HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -686,7 +686,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion1.png",
+        image : "/assets/img/Lenovo/legion1.png",
         specs : [
             "CPU : Intel Core i7-13650HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -703,7 +703,7 @@ const lenovo_category = [
 
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion2.png",
+        image : "/assets/img/Lenovo/legion2.png",
         specs : [
             "CPU : Intel Core i7-14700HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -719,7 +719,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion2.png",
+        image : "/assets/img/Lenovo/legion2.png",
         specs : [
             "CPU : Intel Core i7-14700HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -735,7 +735,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion2.png",
+        image : "/assets/img/Lenovo/legion2.png",
         specs : [
             "CPU : Intel Core i7-14700HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -751,7 +751,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion2.png",
+        image : "/assets/img/Lenovo/legion2.png",
         specs : [
             "CPU : Intel Core i7-14700HX Processor",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -768,7 +768,7 @@ const lenovo_category = [
 
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion2.png",
+        image : "/assets/img/Lenovo/legion2.png",
         specs : [
             "CPU : Intel Core i9-14900HX (20C/28T)",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -784,7 +784,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion2.png",
+        image : "/assets/img/Lenovo/legion2.png",
         specs : [
             "CPU : Intel Core i9-14900HX (20C/28T)",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -800,7 +800,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion2.png",
+        image : "/assets/img/Lenovo/legion2.png",
         specs : [
             "CPU : Intel Core i9-14900HX (20C/28T)",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -816,7 +816,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION 5 15IRX10",
-        image : "assets/img/Lenovo/legion2.png",
+        image : "/assets/img/Lenovo/legion2.png",
         specs : [
             "CPU : Intel Core i9-14900HX (20C/28T)",
             "RAM : 16GB DDR5 = 32GB = $xxx",
@@ -833,7 +833,7 @@ const lenovo_category = [
 
     {
         title : "LENOVO LEGION PRO 7 16IAX10H",
-        image : "assets/img/Lenovo/legion3.png",
+        image : "/assets/img/Lenovo/legion3.png",
         specs : [
             "CPU : Intel Core Ultra 9 290HX Plus",
             "RAM : 32GB DDR5 = 64GB = $xxx",
@@ -849,7 +849,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION PRO 7 16IAX10H",
-        image : "assets/img/Lenovo/legion3.png",
+        image : "/assets/img/Lenovo/legion3.png",
         specs : [
             "CPU : Intel Core Ultra 9 290HX Plus",
             "RAM : 32GB DDR5 = 64GB = $xxx",
@@ -865,7 +865,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION PRO 7 16IAX10H",
-        image : "assets/img/Lenovo/legion3.png",
+        image : "/assets/img/Lenovo/legion3.png",
         specs : [
             "CPU : Intel Core Ultra 9 290HX Plus",
             "RAM : 32GB DDR5 = 64GB = $xxx",
@@ -881,7 +881,7 @@ const lenovo_category = [
     },
     {
         title : "LENOVO LEGION PRO 7 16IAX10H",
-        image : "assets/img/Lenovo/legion3.png",
+        image : "/assets/img/Lenovo/legion3.png",
         specs : [
             "CPU : Intel Core Ultra 9 290HX Plus",
             "RAM : 32GB DDR5 = 64GB = $xxx",
@@ -896,23 +896,6 @@ const lenovo_category = [
         category : "gaming"
     },
 ]
-let lenovo_html = "";
-lenovo_category.map((item, index) => {
-    lenovo_html += `
-        <figure>
-            <img src="${item.image}" alt="">
-            <h4>${item.title}</h4>
-            <ul>
-                ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
-            </ul>
-            <div>
-                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
-                <button>Buy Now</button>
-            </div>
-        </figure>
-    `;
-})
-lenovo_section.innerHTML = lenovo_html;
 const proart_section = document.getElementById('proart')
 const proart_category = [
     {
@@ -983,23 +966,6 @@ const proart_category = [
         category : "workstation"
     },
 ]
-let proart_html = ""
-proart_category.map((item, index) =>{
-    proart_html +=`
-        <figure>
-            <img src="${item.image}" alt="">
-            <h4>${item.title}</h4>
-            <ul>
-                ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
-            </ul>
-            <div>
-                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
-                <button>Buy Now</button>
-            </div>
-        </figure>
-    `
-})
-proart_section.innerHTML = proart_html;
 const rog_section = document.getElementById('rog')
 const rog_category = [
     {
@@ -2012,24 +1978,6 @@ const rog_category = [
     },
 ]
 
-let rog_html = ""
-rog_category.map((item, index) => {
-    rog_html +=`
-        <figure>
-            <img src="${item.image}" alt="">
-            <h4>${item.title}</h4>
-            <ul>
-                ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
-            </ul>
-            <div>
-                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
-                <button>Buy Now</button>
-            </div>
-        </figure>
-    `
-})
-rog_section.innerHTML = rog_html;
-
 const msi_section = document.getElementById('msi')
 const msi_category = [
     {
@@ -2943,24 +2891,6 @@ const msi_category = [
     },
 ]
 
-let msi_html = "";
-msi_category.map((item, index) => {
-    msi_html += `
-        <figure>
-            <img src="${item.image}" alt="">
-            <h4>${item.title}</h4>
-            <ul>
-                ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
-            </ul>
-            <div>
-                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
-                <button>Buy Now</button>
-            </div>
-        </figure>
-    `;
-})
-msi_section.innerHTML = msi_html;
-
 const alienware_section = document.getElementById('alienware')
 const alienware_category = [
     {
@@ -3028,28 +2958,11 @@ const alienware_category = [
         category : "gaming"
     }
 ]
-let alienware_html = ""
-alienware_category.map((item, index) => {
-    alienware_html += `
-        <figure>
-            <img src="${item.image}" alt="">
-            <h4>${item.title}</h4>
-            <ul>
-                ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
-            </ul>
-            <div>
-                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
-                <button>Buy Now</button>
-            </div>
-        </figure>
-    `
-})
-alienware_section.innerHTML = alienware_html
 const omen_section = document.getElementById('omen')
 const omen_category = [
     {
         title : "OMEN GAMING LAPTOP 16",
-        image : "assets/img/hp/omen1.png",
+        image : "/assets/img/hp/omen1.png",
         specs : [
             "CPU : Intel® Core™ i7 14th generation processor",
             "RAM : 32GB",
@@ -3066,7 +2979,7 @@ const omen_category = [
     },
     {
         title : "OMEN GAMING LAPTOP 16-AP0097NR 16",
-        image : "assets/img/hp/omen1.png",
+        image : "/assets/img/hp/omen1.png",
         specs : [
             "CPU : AMD Ryzen™ AI 9 processor",
             "RAM : 32GB",
@@ -3083,7 +2996,7 @@ const omen_category = [
     },
     {
         title : "OMEN TRANSCEND LAPTOP 16-FB0097NR 14",
-        image : "assets/img/hp/omen3.png",
+        image : "/assets/img/hp/omen3.png",
         specs : [
             "CPU : Intel® Core™ Ultra 9 processor",
             "RAM : 32GB",
@@ -3100,7 +3013,7 @@ const omen_category = [
     },
     {
         title : "OMEN TRANSCEND LAPTOP 16-FB0097NR 14",
-        image : "assets/img/hp/omen4.png",
+        image : "/assets/img/hp/omen4.png",
         specs : [
             "CPU : Intel® Core™ Ultra 7 Series 2 processor",
             "RAM : 32GB",
@@ -3118,7 +3031,7 @@ const omen_category = [
 
     {
         title : "OMEN GAMING LAPTOP 16-AP0097NR 16",
-        image : "assets/img/hp/omen2.png",
+        image : "/assets/img/hp/omen2.png",
         specs : [
             "CPU : AMD Ryzen™ AI 7 processor",
             "RAM : 16GB",
@@ -3135,7 +3048,7 @@ const omen_category = [
     },
     {
         title : "OMEN GAMING LAPTOP 16-AP0097NR 16",
-        image : "assets/img/hp/omen2.png",
+        image : "/assets/img/hp/omen2.png",
         specs : [
             "CPU : Intel® Core™ Ultra 7 processor",
             "RAM : 16GB",
@@ -3152,7 +3065,7 @@ const omen_category = [
     },
     {
         title : "OMEN GAMING LAPTOP 16-AP0097NR 16",
-        image : "assets/img/hp/omen2.png",
+        image : "/assets/img/hp/omen2.png",
         specs : [
             "CPU : AMD Ryzen™ AI 9 Series 2 processor",
             "RAM : 32GB",
@@ -3169,7 +3082,7 @@ const omen_category = [
     },
     {
         title : "OMEN GAMING LAPTOP 16-AP0097NR 16",
-        image : "assets/img/hp/omen2.png",
+        image : "/assets/img/hp/omen2.png",
         specs : [
             "CPU : AMD Ryzen™ AI 9 processor",
             "RAM : 32GB",
@@ -3185,23 +3098,7 @@ const omen_category = [
         category : "gaming"
     },
 ]
-let omen_html = "";
-omen_category.map((item, index) => {
-    omen_html += `
-        <figure>
-            <img src="${item.image}" alt="">
-            <h4>${item.title}</h4>
-            <ul>
-                ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
-            </ul>
-            <div>
-                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
-                <button>Buy Now</button>
-            </div>
-        </figure>
-    `
-})
-omen_section.innerHTML = omen_html;
+
 const acer_section = document.getElementById('acer')
 const acer_category = [
     // workstation
@@ -3465,20 +3362,15 @@ const acer_category = [
         category : "gaming"
     },
 ]
-let acer_html = "";
-acer_category.map((item, index) => {
-    acer_html += `
-        <figure>
-            <img src="${item.image}" alt="">
-            <h4>${item.title}</h4>
-            <ul>
-                ${item.specs.map((spec) => `<li>${spec}</li>`).join("")}
-            </ul>
-            <div>
-                <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
-                <button>Buy Now</button>
-            </div>
-        </figure>
-    `
-})
-acer_section.innerHTML = acer_html;
+const brand = {
+    apple: apple_category,
+    lenovo: lenovo_category,
+    proart: proart_category,
+    rog: rog_category,
+    msi: msi_category,
+    alienware: alienware_category,
+    omen: omen_category,
+    acer: acer_category
+};
+
+Object.entries(brand).forEach(([id, products]) => renderBrand(id, products));

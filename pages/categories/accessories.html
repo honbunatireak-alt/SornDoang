@@ -12,11 +12,12 @@
     <!-- Font Awesome Free v7.3.1 via cdnjs -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body data-category="">
     <header>
+        <input type="checkbox" id="menu">
         <div class="header_top">
             <div class="nd_main">
-                <a href="/index.html" class="logo_name">
+                <a class="logo_name">
                     <div>
                         <img src="/assets/img/Logo.png" alt="SornDoang STORE Logo">
                     </div>
@@ -26,10 +27,11 @@
                     </div>
                 </a>
             </div>
+            <label for="menu" class="burger" aria-label="Toggle menu"><span></span></label>
             <div class="site_content">
                 <div class="search_btn">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search" class="search-text" name="">
+                    <input type="text" placeholder="Search" class="search-text author-search" id="authorSearch" name="">
                 </div>
                 <div>
                     <ul class="socials">
