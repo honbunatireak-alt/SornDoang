@@ -17,7 +17,7 @@ function renderBrand(sectionId, products) {
             </ul>
             <div>
                 <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
-                <button>Buy Now</button>
+                <button>Add to card</button>
             </div>
         </figure>
     `).join("");
