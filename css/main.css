@@ -7,7 +7,7 @@ body{
     font-family: "Space Grotesk", sans-serif;
     font-weight: 300;
     font-size: large;
-    background-color: #30019d3b;
+    background-color: white;
 }
 header{
     background-color: rgb(49, 0, 122);
@@ -16,7 +16,12 @@ header{
     flex-direction: column;
     width: 100%;
     height: 150px;
-    min-height: 150px; 
+    min-height: 150px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;    
+    z-index: 1000; 
 }
 header .header_top{
     display: flex;
@@ -173,6 +178,7 @@ header .navbar ul li a:hover{
 @media (max-width: 768px) {
     header {
         min-height: 0;
+        height: 80px;
         padding: 0.8rem;
     }
 
@@ -539,4 +545,12 @@ footer .last_footer{
     display: flex;
     justify-content: space-between;
     border-top: 1px solid white;
+}
+@media (max-width: 768px) {
+    footer .side{
+        display: none;
+    }
+    .last_footer{
+        font-size: small;
+    }
 }
