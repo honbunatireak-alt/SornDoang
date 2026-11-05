@@ -11,8 +11,16 @@
     <link rel="stylesheet" href="/css/ultrabooks.css">
     <!-- Font Awesome Free v7.3.1 via cdnjs -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        })();
+    </script>
 </head>
-<body data-category="ultrabook">
+<body data-category="ultrabook" id="body">
     <header>
         <input type="checkbox" id="menu">
         <div class="header_top">
@@ -43,6 +51,9 @@
                         </a></li>
                     </ul>
                 </div>
+                <button id="mode" aria-label="Switch to dark mode">
+                    <span class="material-icons">dark_mode</span>
+                </button>
                 <div class="signin">
                     <button>Sign In/ Sign Up</button>
                 </div>
@@ -55,6 +66,7 @@
                 <li><a href="/pages/categories/ultrabooks.html">Ultrabooks</a></li>
                 <li><a href="/pages/categories/workstations.html">Workstation</a></li>
                 <li><a href="/pages/categories/accessories.html">Accessories</a></li>
+                <li class="nav_signin"><a href="/pages/auth/login.html">Sign In / Sign Up</a></li>
             </ul>
         </nav>
     </header>
@@ -141,6 +153,8 @@
         </div>
         </div>
     </footer>
+    <script src="/js/components/nightMode.js"></script>
+    <script src="/js/components/search.js"></script>
     <script src="/js/pages/main.js"></script>
 </body>
 </html>

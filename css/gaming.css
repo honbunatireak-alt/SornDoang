@@ -1,3 +1,30 @@
+/*  */
+:root{
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --header: rgb(49, 0, 122);
+    --card: #ffffff;
+    --card-border: #e5e7eb;
+    --shadow: rgba(0, 0, 0, 0.25);
+    --hover-shadow: rgba(0, 0, 0, 0.3);
+    --price: rgb(221, 1, 1);
+    --search-bg: #ffffff;
+    --search-text: #1a1a1a;
+}
+[data-theme="dark"]{
+    color-scheme: dark;
+    --bg: #12101c;
+    --text: #e8e6f0;
+    --header: #1c0f3a;
+    --card: #1c1830;
+    --card-border: #2f2a4a;
+    --shadow: rgba(0, 0, 0, 0.7);
+    --hover-shadow: rgba(170, 0, 255, 0.3);
+    --price: #ff6b6b;
+    --search-bg: #2a2540;
+    --search-text: #e8e6f0;
+}
+/*  */
 *{
     margin: 0;
     padding: 0;
@@ -10,11 +37,17 @@ body{
     font-family: "Space Grotesk", sans-serif;
     font-weight: 300;
     font-size: large;
-    background-color: white;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
     padding: 150px 0 0 0;
 }
+body h3{
+    margin: 0.5rem 0 0.5rem 15px;
+    box-shadow: 0 6px 6px -6px var(--shadow);
+}
 header{
-    background-color: rgb(49, 0, 122);
+    background-color: var(--header);
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -66,11 +99,12 @@ header .header_top .nd_main a{
 }
 header .header_top .site_content{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 /* search  */
 header .header_top .site_content .search_btn{
-    background-color: white;
+    background-color: var(--search-bg);
     height: 50px;
     border-radius: 8px;
     display: flex;
@@ -81,11 +115,14 @@ header .header_top .site_content .search_btn i{
     border: none;
     border-radius: 8px;
     font-size: 2rem;
+    color: var(--search-text);
+    
 }
 header .header_top .site_content .search_btn input{
     width: 300px;
     height: 48px;
-    background-color: white;
+    background-color: transparent;
+    color: var(--search-text);
     border-radius: 8px;
     border: none;
     outline: none;
@@ -110,7 +147,7 @@ header ul a{
 /* contact */
 header .header_top .site_content div .socials{
     font-size: xx-large;
-    margin: 6px 0 0 5px;
+    margin: 0 0 0 10px;
     display: flex;
     color: #00ffff;
 }
@@ -126,11 +163,33 @@ header .header_top .site_content div .socials li:nth-child(1) i:hover{
 /* facebook */
 header .header_top .site_content div .socials li:nth-child(2) i{
     color: #0866FF;
-    transition: color 0,5s ease,
-                filter 0,5s ease;
+    transition: color 0.5s ease,
+                filter 0.5s ease;
 }
 header .header_top .site_content div .socials li:nth-child(2) i:hover{
     filter: brightness(1.3);
+}
+/* mode */
+/* mode */
+header .header_top .site_content #mode{
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+header .header_top .site_content #mode:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+header .header_top .site_content #mode span{
+    color: white;
+    font-size: 1.7rem;
+    margin: 0;
 }
 /* button */
 header .header_top .site_content .signin button{
@@ -186,6 +245,8 @@ header .navbar ul li a:hover{
         min-height: 0;
         height: 80px;
         padding: 0.8rem;
+        background-color: var(--header);
+        scroll-padding-top: 80px;
     }
 
     header .header_top {
@@ -201,31 +262,32 @@ header .navbar ul li a:hover{
         order: 1;
         min-width: 0;
     }
+    header .header_top .nd_main .logo_name {
+        align-items: center;
+    }
     header .header_top .nd_main .logo_name div img {
         height: 44px;
         width: 44px;
     }
     header .header_top .nd_main .logo_name #nameHeader h1:nth-child(1),
     header .header_top .nd_main .logo_name #nameHeader h1:nth-child(2) {
-        font-size: 1rem;
-        margin: 0;
+        font-size: 1.2rem;
     }
 
     /* hide search and contact (socials), keep Sign In */
-    header .header_top .site_content {
+    /* header: logo, dark mode button, burger */
+    header .header_top .site_content{
         order: 2;
-        display: block;
+        display: flex;
+        align-items: center;
     }
     header .header_top .site_content .search_btn,
-    header .header_top .site_content div:has(.socials) {
+    header .header_top .site_content div:has(.socials),
+    header .header_top .site_content .signin{
         display: none;
     }
-    header .header_top .site_content .signin button {
-        margin: 0;
-        width: auto;
-        height: 40px;
-        padding: 0 0.9rem;
-        font-size: 0.85rem;
+    header .header_top .site_content .search_btn input{
+        width: 150px;
     }
 
     /* burger (right), always above the side panel */
@@ -289,7 +351,13 @@ header .navbar ul li a:hover{
         visibility: visible;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.55);   /* dark overlay behind the panel */
     }
-
+    header .navbar ul li.nav_signin{
+    display: none;
+    }
+    header .header_top .site_content .signin button{
+        width: 105px;
+        font-size: 0.85rem;
+    }
     header .navbar ul {
         flex-direction: column;
         align-items: stretch;
@@ -305,17 +373,40 @@ header .navbar ul li a:hover{
         font-size: 1.05rem;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
+    header .header_top .site_content #mode{
+        width: 40px;
+        height: 40px;
+        margin-left: 0;
+    }
+    header .header_top .site_content div .socials{
+        font-size: x-large;
+    }
 }
 
 /* ---------- small phones ---------- */
 @media (max-width: 480px) {
-    /* make room: hide the "Welcome to" line */
-    header .header_top .nd_main .logo_name #nameHeader h1:nth-child(1) {
-        display: none;
+    header .header_top {
+        gap: 0.3rem;
     }
-    header .header_top .site_content .signin button {
-        padding: 0 0.7rem;
+    header .header_top .nd_main .logo_name div img {
+        height: 38px;
+        width: 38px;
+    }
+    header .header_top .nd_main .logo_name #nameHeader {
+        padding-left: 0.4rem;
+    }
+    header .header_top .nd_main .logo_name #nameHeader h1:nth-child(1),
+    header .header_top .nd_main .logo_name #nameHeader h1:nth-child(2) {
         font-size: 0.8rem;
+        line-height: 1.2;
+    }
+    header .header_top .site_content #mode {
+        width: 36px;
+        height: 36px;
+    }
+    .burger {
+        width: 38px;
+        height: 38px;
     }
 }
 #apple, #lenovo, #proart, #rog, #msi, #alienware, #omen, #acer{
@@ -332,18 +423,19 @@ body h3{
 section figure{
     margin: 0;
     width: 100%;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--card-border);
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--card);
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 6px -6px var(--shadow);
     transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+                box-shadow 0.3s ease,
+                background-color 0.3s ease;
 }
 section figure:hover, section figure:focus-visible{
-    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 30px var(--hover-shadow);
 }
 @media (prefers-reduced-motion: no-preference) {
     section figure:hover, section figure:focus-visible {
@@ -362,7 +454,7 @@ section figure ul{
     margin: 10px 0 0 0;
     list-style-type: "_ ";
     padding-left: 0.85rem;
-    box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 6px -6px var(--shadow);
 }
 section figure ul li{
     font-size: 0.93rem;
@@ -380,7 +472,7 @@ section figure div{
 section figure div h5{
     font-size: 1.2rem;
     font-weight: 700;
-    color: rgb(221, 1, 1);
+    color: var(--price);
 }
 @keyframes hover-shine {
     from { transform: translateX(-120%) skewX(-20deg); }
@@ -482,7 +574,7 @@ section figure div button:hover, section figure div button:focus-visible{
 @media (hover: none) {
     section figure:hover{
         transform: none;
-        box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 6px 6px -6px var(--shadow);
     }
 }
 /* footer */
@@ -492,10 +584,11 @@ footer{
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    background-color: rgb(49, 0, 122);
+    background-color: var(--header);
 }
 footer .side{
     display: flex;
+    gap: 2rem;
 }
 footer .side .st_footer .s_footer{
     display: flex;
@@ -527,11 +620,15 @@ footer .side .other_side{
     display: flex;
     flex-direction: row;
     margin-left: 100px;
+    justify-content: space-between;
     gap: 15rem;
 }
 footer .side .other_side div{
     display: flex;
     flex-direction: column;
+}
+footer .side .other_side div h3{
+    margin: 0;
 }
 footer .side .other_side div a{
     text-decoration: none;

@@ -1,3 +1,31 @@
+/* ---------- theme colors ---------- */
+:root{
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --header: rgb(49, 0, 122);
+    --card: #ffffff;
+    --card-border: #e5e7eb;
+    --shadow: rgba(0, 0, 0, 0.25);
+    --hover-shadow: rgba(0, 0, 0, 0.3);
+    --price: rgb(221, 1, 1);
+    --search-bg: #ffffff;
+    --search-text: #1a1a1a;
+}
+[data-theme="dark"]{
+    color-scheme: dark;
+    --bg: #12101c;
+    --text: #e8e6f0;
+    --header: #1c0f3a;
+    --card: #1c1830;
+    --card-border: #2f2a4a;
+    --shadow: rgba(0, 0, 0, 0.7);
+    --hover-shadow: rgba(170, 0, 255, 0.3);
+    --price: #ff6b6b;
+    --search-bg: #2a2540;
+    --search-text: #e8e6f0;
+}
+
+/* ---------- base ---------- */
 *{
     margin: 0;
     padding: 0;
@@ -10,11 +38,19 @@ body{
     font-family: "Space Grotesk", sans-serif;
     font-weight: 300;
     font-size: large;
-    background-color: white;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
     padding: 150px 0 0 0;
 }
+body h3{
+    margin: 0.5rem 0 0.5rem 15px;
+    box-shadow: 0 6px 6px -6px var(--shadow);
+}
+
+/* ---------- header ---------- */
 header{
-    background-color: rgb(49, 0, 122);
+    background-color: var(--header);
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -24,7 +60,7 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    position: fixed;    
+    position: fixed;
     z-index: 1000;
 }
 header .header_top{
@@ -40,8 +76,8 @@ header .header_top .nd_main{
 }
 header .header_top .nd_main .logo_name #nameHeader{
     padding-left: 0.5rem;
-}       
-header .header_top .nd_main .logo_name #nameHeader  h1:nth-child(1){
+}
+header .header_top .nd_main .logo_name #nameHeader h1:nth-child(1){
     color: white;
     font-size: 1.5rem;
 }
@@ -66,26 +102,30 @@ header .header_top .nd_main a{
 }
 header .header_top .site_content{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    align-items: center;
 }
-/* search  */
+
+/* search */
 header .header_top .site_content .search_btn{
-    background-color: white;
+    background-color: var(--search-bg);
     height: 50px;
     border-radius: 8px;
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 0 1rem;
 }
 header .header_top .site_content .search_btn i{
     border: none;
     border-radius: 8px;
     font-size: 2rem;
+    color: var(--search-text);
 }
 header .header_top .site_content .search_btn input{
     width: 300px;
     height: 48px;
-    background-color: white;
+    background-color: transparent;
+    color: var(--search-text);
     border-radius: 8px;
     border: none;
     outline: none;
@@ -94,10 +134,10 @@ header .navbar{
     padding: 1.2rem;
     display: flex;
 }
-#menu {
+#menu{
     display: none;
 }
-.burger {
+.burger{
     display: none;     /* hidden on desktop */
 }
 header ul{
@@ -107,10 +147,11 @@ header ul a{
     text-decoration: none;
     color: white;
 }
+
 /* contact */
 header .header_top .site_content div .socials{
     font-size: xx-large;
-    margin: 6px 0 0 5px;
+    margin: 0 0 0 10px;
     display: flex;
     color: #00ffff;
 }
@@ -126,13 +167,36 @@ header .header_top .site_content div .socials li:nth-child(1) i:hover{
 /* facebook */
 header .header_top .site_content div .socials li:nth-child(2) i{
     color: #0866FF;
-    transition: color 0,5s ease,
-                filter 0,5s ease;
+    transition: color 0.5s ease,
+                filter 0.5s ease;
 }
 header .header_top .site_content div .socials li:nth-child(2) i:hover{
     filter: brightness(1.3);
 }
-/* button */
+
+/* dark mode button */
+header .header_top .site_content #mode{
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+header .header_top .site_content #mode:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+header .header_top .site_content #mode span{
+    color: white;
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+/* sign in button */
 header .header_top .site_content .signin button{
     background-color: #aa00ff;
     border: none;
@@ -153,10 +217,12 @@ header .header_top .site_content .signin button:focus-visible{
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.108);
 }
 @media (prefers-reduced-motion: no-preference) {
-    header .header_top .site_content .signin button:hover, header .header_top .site_content .signin button:focus-visible {
+    header .header_top .site_content .signin button:hover,
+    header .header_top .site_content .signin button:focus-visible {
         transform: scale(1.01) translateY(-2px);
     }
 }
+
 /* navbar */
 header .navbar{
     justify-content: center;
@@ -177,18 +243,43 @@ header .navbar ul a{
 header .navbar ul li a:hover{
     color: #aa00ff;
 }
+/* the Sign In link inside the nav list is for phones only */
+header .navbar ul li.nav_signin{
+    display: none;
+}
+
+/* ---------- tablet ---------- */
+@media (max-width: 1024px) and (min-width: 769px) {
+    header .header_top .nd_main .logo_name #nameHeader h1:nth-child(1),
+    header .header_top .nd_main .logo_name #nameHeader h1:nth-child(2){
+        font-size: 1.2rem;
+    }
+    header .header_top .site_content .search_btn input{
+        width: 150px;
+    }
+    header .header_top .site_content div .socials{
+        font-size: x-large;
+    }
+    header .header_top .site_content .signin button{
+        width: 105px;
+        font-size: 0.85rem;
+    }
+}
+
 /* ---------- mobile and small tablet ---------- */
 @media (max-width: 768px) {
+    html{
+        scroll-padding-top: 80px;
+    }
     body{
         padding: 80px 0 0 0;
     }
-    header {
+    header{
         min-height: 0;
         height: 80px;
         padding: 0.8rem;
     }
-
-    header .header_top {
+    header .header_top{
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
@@ -196,40 +287,42 @@ header .navbar ul li a:hover{
     }
 
     /* logo (left) */
-    header .header_top .nd_main {
+    header .header_top .nd_main{
         flex: 1;
         order: 1;
         min-width: 0;
     }
-    header .header_top .nd_main .logo_name div img {
+    header .header_top .nd_main .logo_name{
+        align-items: center;
+    }
+    header .header_top .nd_main .logo_name div img{
         height: 44px;
         width: 44px;
     }
     header .header_top .nd_main .logo_name #nameHeader h1:nth-child(1),
-    header .header_top .nd_main .logo_name #nameHeader h1:nth-child(2) {
-        font-size: 1rem;
-        margin: 0;
+    header .header_top .nd_main .logo_name #nameHeader h1:nth-child(2){
+        font-size: 1.2rem;
     }
 
-    /* hide search and contact (socials), keep Sign In */
-    header .header_top .site_content {
+    /* header: logo, dark mode button, burger */
+    header .header_top .site_content{
         order: 2;
-        display: block;
+        display: flex;
+        align-items: center;
     }
     header .header_top .site_content .search_btn,
-    header .header_top .site_content div:has(.socials) {
+    header .header_top .site_content div:has(.socials),
+    header .header_top .site_content .signin{
         display: none;
     }
-    header .header_top .site_content .signin button {
-        margin: 0;
-        width: auto;
+    header .header_top .site_content #mode{
+        width: 40px;
         height: 40px;
-        padding: 0 0.9rem;
-        font-size: 0.85rem;
+        margin-left: 0;
     }
 
     /* burger (right), always above the side panel */
-    .burger {
+    .burger{
         order: 3;
         display: block;
         position: relative;
@@ -240,7 +333,7 @@ header .navbar ul li a:hover{
     }
     .burger span,
     .burger span::before,
-    .burger span::after {
+    .burger span::after{
         content: "";
         position: absolute;
         left: 10px;
@@ -250,24 +343,24 @@ header .navbar ul li a:hover{
         background: white;
         transition: transform 0.3s ease, top 0.3s ease, background 0.3s ease;
     }
-    .burger span          { top: 20px; }
-    .burger span::before  { left: 0; top: -8px; }
-    .burger span::after   { left: 0; top: 8px; }
+    .burger span{ top: 20px; }
+    .burger span::before{ left: 0; top: -8px; }
+    .burger span::after{ left: 0; top: 8px; }
 
-    #menu:checked ~ .header_top .burger span {
+    #menu:checked ~ .header_top .burger span{
         background: transparent;
     }
-    #menu:checked ~ .header_top .burger span::before {
+    #menu:checked ~ .header_top .burger span::before{
         top: 0;
         transform: rotate(45deg);
     }
-    #menu:checked ~ .header_top .burger span::after {
+    #menu:checked ~ .header_top .burger span::after{
         top: 0;
         transform: rotate(-45deg);
     }
 
-    /* navbar: side panel on the RIGHT, solid background */
-    header .navbar {
+    /* navbar: side panel on the RIGHT */
+    header .navbar{
         position: fixed;
         top: 0;
         right: 0;
@@ -276,21 +369,20 @@ header .navbar ul li a:hover{
         height: 100vh;
         height: 100dvh;
         padding: 5rem 1.2rem 1.5rem;
-        background-color: rgb(49, 0, 122);      /* solid, same as header */
+        background-color: var(--header);
         border-left: 1px solid rgba(255, 255, 255, 0.2);
         display: block;
         overflow-y: auto;
-        transform: translateX(100%);            /* hidden off-screen */
+        transform: translateX(100%);
         visibility: hidden;
         transition: transform 0.3s ease, visibility 0.3s ease;
     }
-    #menu:checked ~ .navbar {
+    #menu:checked ~ .navbar{
         transform: translateX(0);
         visibility: visible;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.55);   /* dark overlay behind the panel */
     }
-
-    header .navbar ul {
+    header .navbar ul{
         flex-direction: column;
         align-items: stretch;
         flex-wrap: nowrap;
@@ -299,54 +391,82 @@ header .navbar ul li a:hover{
         padding: 0;
         width: 100%;
     }
-    header .navbar ul li a {
+    header .navbar ul li a{
         display: block;
         padding: 0.9rem 0;
         font-size: 1.05rem;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
+
+    /* Sign In / Sign Up inside the burger */
+    header .navbar ul li.nav_signin{
+        display: block;
+        margin-top: 1.2rem;
+    }
+    header .navbar ul li.nav_signin a{
+        background-color: #aa00ff;
+        border-radius: 12px;
+        border-bottom: none;
+        text-align: center;
+        font-weight: 700;
+    }
 }
 
 /* ---------- small phones ---------- */
 @media (max-width: 480px) {
-    /* make room: hide the "Welcome to" line */
-    header .header_top .nd_main .logo_name #nameHeader h1:nth-child(1) {
-        display: none;
+    header .header_top{
+        gap: 0.3rem;
     }
-    header .header_top .site_content .signin button {
-        padding: 0 0.7rem;
+    header .header_top .nd_main .logo_name div img{
+        height: 38px;
+        width: 38px;
+    }
+    header .header_top .nd_main .logo_name #nameHeader{
+        padding-left: 0.4rem;
+    }
+    header .header_top .nd_main .logo_name #nameHeader h1:nth-child(1),
+    header .header_top .nd_main .logo_name #nameHeader h1:nth-child(2){
         font-size: 0.8rem;
+        line-height: 1.2;
+    }
+    header .header_top .site_content #mode{
+        width: 36px;
+        height: 36px;
+    }
+    .burger{
+        width: 38px;
+        height: 38px;
     }
 }
+
+/* ---------- product sections (accessories) ---------- */
 #charger, #connector, #hubsNdocks, #kaspersky, #projector, #ups{
     display: grid;
     grid-template-columns: repeat(4, 1fr);     /* desktop: 4 */
     gap: 1rem;
     margin: 1rem;
 }
-/* other */
-body h3{
-    margin: 0.5rem 0 0.5rem 15px;
-    box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.25);
-}
+
+/* ---------- product cards ---------- */
 section figure{
     margin: 0;
     width: 100%;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--card-border);
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--card);
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 6px -6px var(--shadow);
     transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+                box-shadow 0.3s ease,
+                background-color 0.3s ease;
 }
-section figure:hover, section figure:focus-visible{
-    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.3);
+section figure:hover{
+    box-shadow: 0 1px 30px var(--hover-shadow);
 }
 @media (prefers-reduced-motion: no-preference) {
-    section figure:hover, section figure:focus-visible {
+    section figure:hover{
         transform: scale(1.001) translateY(-3px);
     }
 }
@@ -362,12 +482,11 @@ section figure ul{
     margin: 10px 0 0 0;
     list-style-type: "_ ";
     padding-left: 0.85rem;
-    box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 6px -6px var(--shadow);
 }
 section figure ul li{
     font-size: 0.93rem;
 }
-
 section figure div{
     margin-top: auto;
     padding-top: 1rem;
@@ -380,7 +499,7 @@ section figure div{
 section figure div h5{
     font-size: 1.2rem;
     font-weight: 700;
-    color: rgb(221, 1, 1);
+    color: var(--price);
 }
 @keyframes hover-shine {
     from { transform: translateX(-120%) skewX(-20deg); }
@@ -410,19 +529,21 @@ section figure div button::before{
     transform: translateX(-120%) skewX(-20deg);
     pointer-events: none;
 }
-section figure div button:hover, section figure div button:focus-visible{
+section figure div button:hover,
+section figure div button:focus-visible{
     box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
 }
 @media (prefers-reduced-motion: no-preference) {
-    section figure div button:hover::before, section figure div button:focus-visible::before {
+    section figure div button:hover::before,
+    section figure div button:focus-visible::before{
         animation: hover-shine 0.8s ease 1;
     }
-}
-@media (prefers-reduced-motion: no-preference) {
-    section figure div button:hover, section figure div button:focus-visible {
+    section figure div button:hover,
+    section figure div button:focus-visible{
         transform: scale(1.01);
     }
 }
+
 /* laptop / small desktop: 3 columns */
 @media (max-width: 1200px) {
     #charger, #connector, #hubsNdocks, #kaspersky, #projector, #ups{
@@ -437,11 +558,9 @@ section figure div button:hover, section figure div button:focus-visible{
         gap: 0.6rem;
         margin: 0.6rem;
     }
-
     body h3{
         margin-left: 0.6rem;
     }
-
     section figure{
         padding: 0.6rem;
         border-radius: 8px;
@@ -482,9 +601,10 @@ section figure div button:hover, section figure div button:focus-visible{
 @media (hover: none) {
     section figure:hover{
         transform: none;
-        box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 6px 6px -6px var(--shadow);
     }
 }
+
 /* footer */
 footer{
     margin-top: 1rem;
@@ -492,10 +612,11 @@ footer{
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    background-color: rgb(49, 0, 122);
+    background-color: var(--header);
 }
 footer .side{
     display: flex;
+    gap: 2rem;
 }
 footer .side .st_footer .s_footer{
     display: flex;
@@ -527,11 +648,15 @@ footer .side .other_side{
     display: flex;
     flex-direction: row;
     margin-left: 100px;
+    justify-content: space-between;
     gap: 15rem;
 }
 footer .side .other_side div{
     display: flex;
     flex-direction: column;
+}
+footer .side .other_side div h3{
+    margin: 0;
 }
 footer .side .other_side div a{
     text-decoration: none;
