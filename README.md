@@ -17,15 +17,16 @@
 ## Project Structure:
     project/
     ├── index.html                  # Start / Home page
+    ├── 404.html                    # For some page that we didn't code it
     ├── pages/
     │   ├── auth/
-    │   │   ├── login.html          # Login / Sign up
+    │   │   ├── signin.html         # Signin / Sign up
     │   │   └── signup.html
     │   ├── categories/
+    │   │   ├── accessories.html
     │   │   ├── gaming.html
     │   │   ├── ultrabooks.html
-    │   │   ├── workstations.html
-    │   │   └── accessories.html
+    │   │   └── workstations.html
     │   ├── cart.html               # Card (cart)
     │   ├── checkout.html           # Checkout page
     │   └── user/
@@ -36,18 +37,17 @@
     │   ├── gaming.css
     │   ├── ultrabooks.css
     │   ├── workstations.css
+    │   ├── cart.css
     │   └── accessories.css
     ├── js/
     │   ├── components/
     │   │   ├── search.js
     │   │   ├── nightMode.js
-    │   │   └── cart.js
+    │   │   └── cartCount.js
     │   ├── pages/
-    │   │   ├── home.js
-    │   │   ├── category.js
-    │   │   ├── product.js
+    │   │   ├── main.js
     │   │   ├── checkout.js
-    │   │   └── profile.js
+    │   │   └── cart.js
     ├── data/
     │   └──user.js
     ├── assets/

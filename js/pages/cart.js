@@ -17,6 +17,7 @@ function displayCart() {
         container.innerHTML = '<p>Your cart is empty.</p>';
         subtotalEl.textContent = '$0';
         grandTotalEl.textContent = '$0';
+        if (checkoutEl) checkoutEl.hidden = true;
         return;
     }
 
@@ -75,4 +76,72 @@ if (cartPage) {
         saveCart(cart);
         displayCart();
     });
+
+    const checkoutEl = document.getElementById('checkout');
+    const checkoutBtn = document.getElementById('checkout-btn');
+    const checkoutForm = document.getElementById('checkout-form');
+    const cancelCheckout = document.getElementById('cancel-checkout');
+    const cardFields = document.getElementById('card-fields');
+    const paymentNote = document.getElementById('payment-note');
+    const checkoutSuccess = document.getElementById('checkout-success');
+
+    function money(n) {
+        return '$' + Number(n).toLocaleString('en-US');
+    }
+
+    function syncCheckoutSummary() {
+        const cart = getCart();
+        const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+        const count = cart.reduce((sum, item) => sum + item.qty, 0);
+        document.getElementById('checkout-count').textContent = count;
+        document.getElementById('checkout-total').textContent = money(total);
+    }
+
+    function toggleCardFields(method) {
+        const showCard = method === 'card';
+        cardFields.hidden = !showCard;
+        paymentNote.hidden = showCard;
+        cardFields.querySelectorAll('input').forEach(input => {
+            input.required = showCard;
+        });
+        paymentNote.textContent = method === 'cod'
+            ? 'Pay in cash when your order arrives.'
+            : 'Pay with ABA KHQR after we confirm the order. No card details needed.';
+    }
+
+    if (cartPage && checkoutBtn) {
+        checkoutBtn.addEventListener('click', () => {
+            if (getCart().length === 0) {
+                checkoutEl.hidden = true;
+                return;
+            }
+            checkoutSuccess.hidden = true;
+            syncCheckoutSummary();
+            checkoutEl.hidden = false;
+            checkoutEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+
+        cancelCheckout.addEventListener('click', () => {
+            checkoutEl.hidden = true;
+        });
+
+        checkoutForm.addEventListener('change', e => {
+            if (e.target.name === 'payment') toggleCardFields(e.target.value);
+        });
+
+        checkoutForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const cart = getCart();
+            if (cart.length === 0) return;
+
+            saveCart([]);
+            displayCart();
+            syncCheckoutSummary();
+            checkoutForm.reset();
+            toggleCardFields('card');
+            checkoutSuccess.hidden = false;
+        });
+
+        toggleCardFields('card');
+    }
 }
