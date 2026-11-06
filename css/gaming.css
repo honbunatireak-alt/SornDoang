@@ -171,6 +171,22 @@ header .header_top .site_content div .socials li:nth-child(2) i{
 header .header_top .site_content div .socials li:nth-child(2) i:hover{
     filter: brightness(1.3);
 }
+.card-icon{ position: relative; color: white; }
+.card-item-count{
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    border-radius: 9px;
+    background: #aa00ff;
+    color: white;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+}
+.card-item-count:empty{ display: none; }
 header .navbar ul li.nav_signin{
     display: none;
 }
@@ -268,7 +284,7 @@ header .navbar ul li a:hover{
     }
     header .header_top .nd_main .logo_name {
     align-items: center;
-}
+    }
     header .header_top .nd_main .logo_name div img {
         height: 44px;
         width: 44px;
@@ -278,20 +294,46 @@ header .navbar ul li a:hover{
         font-size: 1.2rem;
     }
 
-    /* hide search and contact (socials), keep Sign In */
-    /* header: logo, dark mode button, burger */
-    header .header_top .site_content{
+    header .header_top .site_content {
         order: 2;
         display: flex;
         align-items: center;
+        justify-content: flex-end;
+        flex: 0 0 auto;
+        gap: 8px;
     }
     header .header_top .site_content .search_btn,
-    header .header_top .site_content div:has(.socials),
-    header .header_top .site_content .signin{
+    header .header_top .site_content .signin {
         display: none;
     }
-    header .header_top .site_content .search_btn input{
-        width: 150px;
+    /* Shopping cart - mobile */
+    header .header_top .site_content .socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 8px;
+        padding: 0;
+    }
+
+    /* Hide Telegram */
+    header .header_top .site_content .socials li:nth-child(1) {
+        display: none;
+    }
+
+    /* Hide Facebook */
+    header .header_top .site_content .socials li:nth-child(2) {
+        display: none;
+    }
+
+    /* Keep shopping cart visible */
+    header .header_top .site_content .socials li:nth-child(3) {
+        display: block;
+    }
+
+    header .header_top .site_content .socials .card-icon {
+        display: flex;
+        position: relative;
+        font-size: 1.5rem;
     }
 
     /* burger (right), always above the side panel */
