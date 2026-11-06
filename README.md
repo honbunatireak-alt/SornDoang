@@ -7,12 +7,7 @@
         _ Header, main content, footer
         _ Contact page
         _ Adding products into the card.
-    + Admin:
-        _ With full CRUD(Create, Read, Update, and Delete) control over:
-            _ Users
-            _ Products
-            _ Orders.
-
+        
 ## Technologies Used:
     _ HTML
     _ CSS
