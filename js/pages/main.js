@@ -17,7 +17,7 @@ function renderBrand(sectionId, products) {
             </ul>
             <div>
                 <h5>Price : $${item.price.toLocaleString('en-US')}</h5>
-                <button>Add to card</button>
+                <button class="add-btn" data-id="${item.id}">Add to cart</button>
             </div>
         </figure>
     `).join("");
@@ -26,7 +26,7 @@ function renderBrand(sectionId, products) {
     const show = list.length > 0;
     section.style.display = show ? "" : "none";
     const heading = section.previousElementSibling;
-    if (heading && heading.tagName === "H3") heading.style.display = show ? "" : "none";
+    if (heading && heading.tagName === "h3") heading.style.display = show ? "" : "none";
 }
 const apple_section = document.getElementById('apple');
 
@@ -3717,4 +3717,40 @@ const brand = {
     hubsNdocks: hubsNdocks_category
 };
 
-Object.entries(brand).forEach(([id, products]) => renderBrand(id, products));
+Object.entries(brand).forEach(([id, products]) => {
+    products.forEach((p, i) => { p.id = id + '-' + i; });
+    renderBrand(id, products);
+});
+function findProduct(id) {
+    for (const products of Object.values(brand)) {
+        const p = products.find(x => x.id === id);
+        if (p) return p;
+    }
+}
+
+document.addEventListener('click', e => {
+    const btn = e.target.closest('.add-btn');
+    if (!btn) return;
+
+    const product = findProduct(btn.dataset.id);
+    if (!product) return;
+
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const found = cart.find(i => i.id === product.id);
+
+    if (found) found.qty++;
+    else cart.push({
+        id: product.id,
+        title: product.title,
+        image: product.image,
+        specs: product.specs,
+        price: product.price,
+        qty: 1
+    });
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+
+    btn.textContent = 'Added ✓';
+    setTimeout(() => { btn.textContent = 'Add to cart'; }, 1000);
+});
