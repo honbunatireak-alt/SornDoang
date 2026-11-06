@@ -5,80 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
     <link rel="icon" type="image/png" href="/assets/img/Logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <style>
-        html {
+        html{
             height: 100%;
         }
-        body {
+        body{
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 300;
+            font-size: large;
             margin: 0;
-            min-height: 100%;
-            font-family: sans-serif;
+            min-height: 100vh;
             color: white;
-            background-color: #0b0c2a;
-            background-image: url("./galaxy.png");
-            background-size: cover;
+            background: 
+                radial-gradient(circle at 20% 20%, rgb(90, 12, 110) 0%, rgb(38, 5, 74) 45%, rgb(14, 5, 28) 100%),
+                url("./galaxy.png");
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        /* login card */
-        .form {
+        .form{
             width: calc(100% - 2.5rem);
             max-width: 24rem;
             margin: 4rem auto;
             padding: 2rem 1.75rem;
-            background-color: rgba(18, 0, 60, .85);
+            background-color: rgb(49, 0, 122);
             color: #fff;
             border: 1px solid rgba(255, 255, 255, .12);
             border-radius: 20px;
             box-shadow: 0 10px 40px rgba(89, 17, 255, .45);
             backdrop-filter: blur(8px);
         }
-
-        .form h3 {
-            margin: 0 0 1.5rem;
-            text-align: center;
-            font-size: 1.75rem;
-            font-weight: 700;
+        .form .logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 1rem;
         }
-
-        /* grid: icon | input, everything else spans both columns */
-        .form form {
+        .form .logo img{
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+        .form .logo h3{
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+        .form .logo h3:first-child{
+            color: #22d3ee;
+        }
+        .text-title {
+            text-align: center;
+            margin: 0 0 1.5rem 0;
+            font-size: 1.5rem;
+        }
+        .form form{
             display: grid;
             grid-template-columns: auto 1fr;
             align-items: center;
         }
-        .form form br {
+        .form form br{
             display: none;
         }
-
         .form label {
             grid-column: 1 / -1;
             margin: 0 0 .4rem .25rem;
             font-size: .9rem;
             color: #c9c3e6;
         }
-
-        /* icon + input look like one field */
-        .form form i {
+        .form form i:not(#togglePassword){
             display: grid;
             place-items: center;
             box-sizing: border-box;
             width: 2.75rem;
-            align-self: stretch;          /* same height as the input, no 100% */
+            align-self: stretch;
             margin-bottom: 1.1rem;
             background: rgba(255, 255, 255, .08);
             border: 1px solid rgba(255, 255, 255, .18);
             border-right: 0;
             border-radius: 999px 0 0 999px;
             color: #22d3ee;
-            transition: border-color .3s ease, box-shadow .3s ease;
         }
-        .form input {
-            box-sizing: border-box;       /* padding and border stay inside the width */
+        .form input{
+            box-sizing: border-box;
             width: 100%;
-            min-width: 0;                 /* lets the grid column shrink the input */
+            min-width: 0;
             margin-bottom: 1.1rem;
             padding: .8rem 1rem .8rem .25rem;
             background: rgba(255, 255, 255, .08);
@@ -88,18 +107,49 @@
             color: #fff;
             font-size: 1rem;
             outline: none;
-            transition: border-color .3s ease, box-shadow .3s ease;
         }
-        .form input::placeholder {
+        .form input::placeholder{
             color: #9d96c4;
         }
         .form input:focus,
-        .form i:has(+ input:focus) {
-            border-color: #a855f7;
-            box-shadow: 0 0 14px rgba(168, 85, 247, .55);
+        .form i:has(+ input:focus){
+            border-color: rgba(255, 255, 255, .18);
+            box-shadow: none;
         }
-
-        /* forgot password */
+        .input-wrapper{
+            grid-column: 2;
+            position: relative;
+            width: 100%;
+            margin-bottom: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+        .input-wrapper input{
+            margin-bottom: 0 !important;
+            padding-right: 2.75rem !important;
+            border-top-right-radius: 999px !important;
+            border-bottom-right-radius: 999px !important;
+            border-right: 1px solid rgba(255, 255, 255, .18) !important;
+        }
+        #togglePassword{
+            position: absolute;
+            right: 1rem;
+            cursor: pointer;
+            color: #c9c3e6;
+            font-size: 1rem;
+            z-index: 3;
+            background: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            width: auto !important;
+            height: auto !important;
+            margin: 0 !important;
+            display: inline-block !important;
+            transition: color 0.3s ease;
+        }
+        #togglePassword:hover{
+            color: #22d3ee;
+        }
         .form form > a {
             grid-column: 1 / -1;
             justify-self: end;
@@ -110,12 +160,10 @@
             transition: color .3s ease;
         }
         .form form > a:hover,
-        .form form > a:focus-visible {
+        .form form > a:focus-visible{
             color: #22d3ee;
         }
-
-        /* button */
-        .form button {
+        .form button{
             grid-column: 1 / -1;
             padding: .8rem 1.1rem;
             background: linear-gradient(135deg, #5911ff, #a855f7);
@@ -128,43 +176,58 @@
             transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
         }
         .form button:hover,
-        .form button:focus-visible {
+        .form button:focus-visible{
             box-shadow: 0 0 30px #5911ff;
             filter: brightness(1.2);
         }
-        @media (prefers-reduced-motion: no-preference) {
+        @media (prefers-reduced-motion: no-preference){
             .form button:hover,
             .form button:focus-visible { transform: scale(1.03); }
         }
-
-        /* sign up line */
-        .form > p {
+        .form > p{
             margin: 1.5rem 0 0;
             text-align: center;
             font-size: .9rem;
             color: #c9c3e6;
         }
-        .form > p a {
+        .form > p a{
             color: #22d3ee;
             font-weight: 700;
             text-decoration: none;
         }
         .form > p a:hover,
-        .form > p a:focus-visible {
+        .form > p a:focus-visible{
             text-decoration: underline;
+        }
+        @media (max-width: 768px){
+            .form{
+                width: 300px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="form">
-        <h3 class="text-white ">Login</h3>
+        <div class="logo">
+            <img src="/assets/img/Logo.png" alt="logo">
+            <div>
+                <h3>SornDoang</h3>
+                <h3>Store</h3>
+            </div>
+        </div>
+        <h3 class="text-white">Login</h3>
         <form action="">
             <label>Enter your email</label><br>
             <i class="fa-regular fa-user"></i>  
             <input type="email" name="Email" placeholder="Email" required> <br>
+            
             <label>Enter your password</label><br>
             <i class="fa-solid fa-lock"></i>
-            <input type="password" name="password" placeholder="Password" required> <br>
+            <div class="input-wrapper">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <i class="fa-regular fa-eye" id="togglePassword"></i>
+            </div>
+            <br>
             <a href="./forgot-password.html">forget password?</a>
             <button type="submit">Login</button>
         </form> 
@@ -174,5 +237,16 @@
             </span>
         </p>
     </div>
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
 </body>
 </html>

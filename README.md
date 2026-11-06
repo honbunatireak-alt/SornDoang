@@ -1,5 +1,5 @@
-# Title project: SornDoang Store
-    Here is the capstone project. And it is the website that using only HTML5, CSS, Tailwind, JavaScript, and Bootstrap.
+# SornDoang Store
+    This is a final project for course
 
 ## Feature:
     + User:
@@ -14,10 +14,9 @@
             _ Orders.
 
 ## Technologies Used:
-    _ HTML5
-    _ CSS3
+    _ HTML
+    _ CSS
     _ Bootstrap
-    _ Tailwind
     _ JavaScript.
 
 ## Project Structure:
@@ -32,36 +31,21 @@
     │   │   ├── ultrabooks.html
     │   │   ├── workstations.html
     │   │   └── accessories.html
-    │   ├── product.html            # Product page
     │   ├── cart.html               # Card (cart)
     │   ├── checkout.html           # Checkout page
-    │   ├── favorites.html
-    │   ├── user/
-    │   │   ├── profile.html        # User profile and orders
-    │   │   └── orders.html
-    │   └── admin/
-    │       ├── dashboard.html
-    │       ├── users.html          # Users (CRUD)
-    │       ├── products.html       # Prods (CRUD)
-    │       └── orders.html         # Orders (CRUD)
+    │   └── user/
+    │       ├── profile.html        # User profile and orders
+    │       └── orders.html
     ├── css/
     │   ├── main.css
-    │   ├── components.css
-    │   ├── admin.css
     │   ├── gaming.css
     │   ├── ultrabooks.css
     │   ├── workstations.css
     │   └── accessories.css
     ├── js/
-    │   ├── core/
-    │   │   ├── auth.js             # JS / localStorage auth state check
-    │   │   ├── storage.js          # localStorage helpers
-    │   │   └── router-guard.js     # Redirect: user vs admin vs guest
     │   ├── components/
-    │   │   ├── header.js           # Global header nav
     │   │   ├── search.js
-    │   │   ├── night-mode.js
-    │   │   ├── favorites.js
+    │   │   ├── nightMode.js
     │   │   └── cart.js
     │   ├── pages/
     │   │   ├── home.js
@@ -69,14 +53,8 @@
     │   │   ├── product.js
     │   │   ├── checkout.js
     │   │   └── profile.js
-    │   └── admin/
-    │       ├── users-crud.js
-    │       ├── products-crud.js
-    │       └── orders-crud.js
     ├── data/
-    │   ├── products.json
-    │   ├── users.json
-    │   └── orders.json
+    │   └──user.js
     ├── assets/
     │   ├── images/
     │   └── icons/

@@ -5,111 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>404 - Page Not Found</title>
     <link rel="icon" type="image/png" href="logo.jpg">
+    <link rel="icon" type="image/png" href="/assets/img/Logo.png">
     <style>
         *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    }
 
-html {
-    height: 100%;
-}
-body {
-    margin: 0;
-    min-height: 100%;
-    font-family: sans-serif;
-    color: white;
-    background-color: #0b0c2a;
-    background-image: url("./assets/img/galaxy.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+    html {
+        height: 100%;
+    }
+    body {
+        margin: 0;
+        min-height: 100%;
+        font-family: sans-serif;
+        color: white;
+        background-color: #0b0c2a;
+        background-image: url("./assets/img/galaxy.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 
-.space{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+    .space{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-@keyframes moveStars {
-    0%{transform: translate(0,0);}
-    100%{transform: translate(-1000px, -1000px);}
-}
+    @keyframes moveStars {
+        0%{transform: translate(0,0);}
+        100%{transform: translate(-1000px, -1000px);}
+    }
 
-.astronaut{
-    position: relative;
-    z-index: 2;
-}
+    .astronaut{
+        position: relative;
+        z-index: 2;
+    }
 
-.astronaut img{
-    width: 200px;
-    animation: float 5s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100%{transform: translateY(0px) rotate(0deg);}
-    50%{transform: translateY(-20px) rotate(1.5deg);}
-}
-
-.message{
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.message h1{
-    font-size: 96px;
-    margin-bottom: 8px;
-}
-
-.message p{
-    font-size: 24px;
-    margin-bottom: 24px;
-    color: #ccc;
-}
-
-button{
-    background: none;
-    border: none;
-    margin-top: 16px;
-}
-
-.message a{
-    text-decoration: none;
-    padding: 12px 24px;
-    background: #00bcd4;
-    color: white;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.message a:hover{
-    background-color: #0194a4;
-}
-
-@media (max-width: 600px) {
     .astronaut img{
-        width: 150px;
+        width: 200px;
+        animation: float 5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100%{transform: translateY(0px) rotate(0deg);}
+        50%{transform: translateY(-20px) rotate(1.5deg);}
+    }
+
+    .message{
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        margin-top: 30px;
     }
 
     .message h1{
-        font-size: 64px;
+        font-size: 96px;
+        margin-bottom: 8px;
+    }
+
+    .message p{
+        font-size: 24px;
+        margin-bottom: 24px;
+        color: #ccc;
+    }
+
+    button{
+        background: none;
+        border: none;
+        margin-top: 16px;
     }
 
     .message a{
-        font-size: 20px;
+        text-decoration: none;
+        padding: 12px 24px;
+        background: #00bcd4;
+        color: white;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
     }
-}
+
+    .message a:hover{
+        background-color: #0194a4;
+    }
+
+    @media (max-width: 600px) {
+        .astronaut img{
+            width: 150px;
+        }
+
+        .message h1{
+            font-size: 64px;
+        }
+
+        .message a{
+            font-size: 20px;
+        }
+    }
     </style>
 </head>
 <body>
