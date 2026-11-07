@@ -28,10 +28,7 @@
     │   │   ├── ultrabooks.html
     │   │   └── workstations.html
     │   ├── cart.html               # Card (cart)
-    │   ├── checkout.html           # Checkout page
-    │   └── user/
-    │       ├── profile.html        # User profile and orders
-    │       └── orders.html
+    │   └── checkout.html           # Checkout page
     ├── css/
     │   ├── main.css
     │   ├── gaming.css
@@ -48,8 +45,6 @@
     │   │   ├── main.js
     │   │   ├── checkout.js
     │   │   └── cart.js
-    ├── data/
-    │   └──user.js
     ├── assets/
     │   ├── images/
     │   └── icons/
