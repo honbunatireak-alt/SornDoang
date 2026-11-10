@@ -5,7 +5,6 @@
     + User:
         _ Responsive layout
         _ Header, main content, footer
-        _ Contact page
         _ Adding products into the card.
         
 ## Technologies Used:
