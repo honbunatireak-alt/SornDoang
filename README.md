@@ -58,4 +58,4 @@
 ## Usage:
     1. Open the website and browse products from the header menu.
     2. Use the search bar, dark mode, and cart to find and save items.
-    3. Log in or sign up to see your profile and orders. #just a sample and its won't work
+    3. Log in or sign up to see your profile and orders. #just a sample and its won't work.
